@@ -13,23 +13,23 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) throws InterruptedException {
 
-        Usuario rodrigo = new Usuario("Rodrigo");
-        Usuario enrique = new Usuario("Enrique");
+        String getFlightIdOutput = APIConnection.getFlightId("2", "IB6589");
+        System.out.println("Flight ID: " + getFlightIdOutput);
+        System.out.println("Tamaño de flightId: " + getFlightIdOutput);
+        if (getFlightIdOutput.charAt(0) == '1') {
+            mostrarVentanaError("Error seguimiento de vuelo", "No se ha encontrado ningún vuelo en vivo para \nser rastreado con la información proporcionada.");
+            System.exit(2);  // Terminar el programa
+        }
         String puerto = String.valueOf(FreePortFinder.findFreePort(5000));
         System.out.println("Puerto asignado: "+puerto);
         // Lanzar servicio web local para un número de vuelo y poder consultar
         Thread apiThread = new Thread(() -> APIConnection.loadConnection(puerto,"-n","IB6589"));
         apiThread.start();
         Thread.sleep(10000);
-        String flightId = APIConnection.getFlightId("2", "pelele");
-        System.out.println("Flight ID: " + flightId);
-        System.out.println("Tamaño de flightId: " + flightId);
-        if (flightId.charAt(0) == '1') {
-            mostrarVentanaError("Error en el ID del vuelo", "El ID del vuelo es 1. Programa finalizado.");
-            System.exit(2);  // Terminar el programa
-        }
+        Usuario rodrigo = new Usuario("Rodrigo");
+        Usuario enrique = new Usuario("Enrique");
 
-        Flight mad_eze = new Flight(flightId);
+        Flight mad_eze = new Flight(getFlightIdOutput);
         //TrackerApp editor = new TrackerApp(mad_eze.getId());
         List<Usuario> userlist = Arrays.asList(rodrigo,enrique);
         myEventListener flight1Listener = new FlightListener(userlist);
