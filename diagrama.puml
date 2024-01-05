@@ -1,0 +1,104 @@
+@startuml
+class es.ull.patrones.practica7.Events.FlightListener {
+- List<Usuario> usuarios
++ void addUsuario(Usuario)
++ void update(String)
+}
+interface es.ull.patrones.practica7.Events.myEventListener {
+~ void update(String)
+}
+class es.ull.patrones.practica7.FlightPck.EstadoVuelo.BeforeTO {
++ Estado checkEstado()
++ String toString()
++ String statusString()
+}
+class es.ull.patrones.practica7.Connection.ReadJsonFromUrl {
++ {static} JsonNode read(String)
+- {static} String readJsonFromUrl(String)
+}
+abstract class es.ull.patrones.practica7.FlightPck.EstadoVuelo.Estado {
+# Flight flight
++ {abstract}Estado checkEstado()
++ {abstract}String toString()
++ {abstract}String statusString()
+}
+class es.ull.patrones.practica7.Main {
++ {static} void main(String[])
+}
+class es.ull.patrones.practica7.FlightPck.Status {
++ Integer[] estimated
++ Integer[] real
++ Integer[] scheduled
+}
+class es.ull.patrones.practica7.Ventana {
+- JLabel label
+- String nombreUsuario
++ void mostrarMensaje(String)
+}
+class es.ull.patrones.practica7.FlightPck.EstadoVuelo.Landed {
++ Estado checkEstado()
++ String toString()
++ String statusString()
+}
+class es.ull.patrones.practica7.Connection.FreePortFinder {
++ {static} int findFreePort(int)
++ {static} boolean isPortAvailable(int)
+}
+class es.ull.patrones.practica7.Events.EventManager {
+~ Map<suscriptionObject,List<myEventListener>> listeners
++ void addObserver(suscriptionObject,myEventListener)
++ void removeObserver(suscriptionObject,myEventListener)
++ void notifyObservers(suscriptionObject,String)
++ void checkEvents()
+}
+class es.ull.patrones.practica7.TrackerApp {
++ EventManager events
++ void start()
+}
+class es.ull.patrones.practica7.Connection.APIConnection {
++ {static} String getFlightId(String,String)
++ {static} String loadConnection(String,String,String)
+}
+class es.ull.patrones.practica7.FlightPck.EstadoVuelo.OnAir {
++ Estado checkEstado()
++ String toString()
++ String statusString()
+}
+interface es.ull.patrones.practica7.FlightPck.suscriptionObject {
+~ String getId()
+~ String checkInformation()
+~ String getInitialMessage()
+}
+class es.ull.patrones.practica7.Usuario {
+- Ventana ventana
+- String nombre
++ void recibirAviso(String)
+}
+class es.ull.patrones.practica7.DateFormat {
++ {static} String getFormatedDate(Integer)
+}
+class es.ull.patrones.practica7.FlightPck.Flight {
+- String id
+- String registration
+- String fNumber
+- String originAptIATA
+- String destinationAptIATA
+- Status status
+# String statusURL
+# Estado estado
++ String getId()
++ Status getStatus()
++ String getInitialMessage()
+- void updateStatus()
+- void setEstado()
++ String checkInformation()
+}
+
+
+es.ull.patrones.practica7.Events.myEventListener <|.. es.ull.patrones.practica7.Events.FlightListener
+es.ull.patrones.practica7.FlightPck.EstadoVuelo.Estado <|-- es.ull.patrones.practica7.FlightPck.EstadoVuelo.BeforeTO
+es.ull.patrones.practica7.JFrame <|-- es.ull.patrones.practica7.Ventana
+es.ull.patrones.practica7.FlightPck.EstadoVuelo.Estado <|-- es.ull.patrones.practica7.FlightPck.EstadoVuelo.Landed
+es.ull.patrones.practica7.FlightPck.EstadoVuelo.Estado <|-- es.ull.patrones.practica7.FlightPck.EstadoVuelo.OnAir
+es.ull.patrones.practica7.FlightPck.suscriptionObject <|.. es.ull.patrones.practica7.FlightPck.Flight
+@enduml

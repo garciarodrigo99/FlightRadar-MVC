@@ -1,0 +1,20 @@
+@startuml
+class es.ull.patrones.practica7.Events.EventManager {
+~ Map<suscriptionObject,List<myEventListener>> listeners
++ void addObserver(suscriptionObject,myEventListener)
++ void removeObserver(suscriptionObject,myEventListener)
++ void notifyObservers(suscriptionObject,String)
++ void checkEvents()
+}
+class es.ull.patrones.practica7.Events.FlightListener {
+- List<Usuario> usuarios
++ void addUsuario(Usuario)
++ void update(String)
+}
+interface es.ull.patrones.practica7.Events.myEventListener {
+~ void update(String)
+}
+
+
+es.ull.patrones.practica7.Events.myEventListener <|.. es.ull.patrones.practica7.Events.FlightListener
+@enduml
