@@ -14,20 +14,20 @@ public class BeforeTO extends Estado {
 
     @Override
     public Estado checkEstado() {
-        if (this.flight.getStatus().real[0] != null)
+        if (this.flight.getStatus().real[0] != 0)
             return new OnAir(this.flight);
         return this;
     }
     @Override
     public String toString() {
-        return "Se prevé el despegue a: "+
-                LocalDateTime.ofInstant(Instant.ofEpochSecond(this.flight.getStatus().estimated[0]), ZoneId.systemDefault())
-                        .format(DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss"));
+        return "Before Take Off";
     }
 
     @Override
     public String statusString() {
-        return "Before Take Off";
+        return "Se prevé el despegue a: "+
+                LocalDateTime.ofInstant(Instant.ofEpochSecond(this.flight.getStatus().estimated[0]), ZoneId.systemDefault())
+                        .format(DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss"));
     }
 }
 

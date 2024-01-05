@@ -3,7 +3,8 @@ package es.ull.patrones.practica7.FlightPck;
 import com.fasterxml.jackson.databind.JsonNode;
 
 /**
- * Clase para representar el estado de un vuelo.
+ * Clase para representar las horas programada, estimada y real de salida y
+ * llegada de un vuelo.
  */
 public class Status {
 

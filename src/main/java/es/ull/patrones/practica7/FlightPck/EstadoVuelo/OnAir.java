@@ -13,7 +13,7 @@ public class OnAir extends Estado {
     }
     @Override
     public Estado checkEstado() {
-        if (this.flight.getStatus().real[1] != null)
+        if (this.flight.getStatus().real[1] != 0)
             return new Landed(this.flight);
         return this;
     }

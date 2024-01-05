@@ -77,9 +77,9 @@ public class Flight implements suscriptionObject{
         this.status = new Status(ReadJsonFromUrl.read(this.statusURL));
     }
     private void setEstado(){
-        if (this.status.real[0] == null){
+        if (this.status.real[0] == 0){
             this.estado = new BeforeTO(this);
-        } else if (this.status.real[1] == null){
+        } else if (this.status.real[1] == 0){
             this.estado = new OnAir(this);
         } else {
             this.estado = new Landed(this);
@@ -87,11 +87,12 @@ public class Flight implements suscriptionObject{
     }
     @Override
     public String checkInformation(){
-        String estado_actual = this.estado.statusString();
+        String lastEstado = this.estado.toString();
+        System.out.println("Estado del vuelo: "+lastEstado);
         updateStatus();
         this.estado = this.estado.checkEstado();
-        if(!estado_actual.equals(this.estado.statusString()))
-            return this.estado.toString();
+        if(!lastEstado.equals(this.estado.toString()))
+            return this.estado.statusString();
         return null;
     }
 

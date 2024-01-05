@@ -11,6 +11,7 @@ public abstract class Estado {
 
     public abstract Estado checkEstado();
 
+    @Override
     public abstract String toString();
     public abstract String statusString();
 }

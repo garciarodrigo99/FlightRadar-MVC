@@ -135,3 +135,630 @@ DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flight
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
 DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
 DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5004
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:21:16] "GET /33803683/info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:21:17] "GET /33803683/status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:21:17] "GET /33803683/status HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:21:27] "GET /33803683/status HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:21:37] "GET /33803683/status HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:21:47] "GET /33803683/status HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:21:57] "GET /33803683/status HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 520 None
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:24:13] "[33mGET /3308e49b/status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:24:13] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:24:32] "GET /33803683/status HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:26:01] "GET /33803683/info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:26:01] "GET /33803683/status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:26:01] "GET /33803683/status HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:26:11] "GET /33803683/status HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:27:50] "GET /33803683/info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:27:50] "GET /33803683/status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:27:50] "GET /33803683/status HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:28:00] "GET /33803683/status HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:28:10] "GET /33803683/status HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:28:20] "GET /33803683/status HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:28:30] "GET /33803683/status HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:28:35] "GET /33803683/status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:28:40] "GET /33803683/status HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:28:50] "GET /33803683/status HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:30:07] "GET /33803683/info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:30:07] "GET /33803683/status HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:30:13] "GET /33803683/status HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:31:12] "GET /33803683/status HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:32:10] "GET /33803683/status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:32:11] "GET /33803683/status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:32:13] "GET /33803683/info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:32:13] "GET /33803683/status HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:32:41] "GET /33803683/status HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:32:59] "GET /33803683/info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:32:59] "GET /33803683/status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:32:59] "GET /33803683/status HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:33:09] "GET /33803683/status HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:33:19] "GET /33803683/status HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:33:43] "GET /33803683/info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:33:43] "GET /33803683/status HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:34:11] "GET /33803683/status HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:34:21] "GET /33803683/status HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:37:26] "GET /33803683/status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:37:30] "GET /33803683/info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:37:30] "GET /33803683/status HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:37:56] "GET /33803683/status HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:40:21] "GET /33803683/info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:40:22] "GET /33803683/status HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:40:35] "GET /33803683/status HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:40:49] "GET /33803683/info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:40:50] "GET /33803683/status HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:40:57] "GET /33803683/status HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:41:36] "GET /33803683/status HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:41:58] "GET /33803683/info HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:41:58] "GET /33803683/status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:41:58] "GET /33803683/status HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:42:08] "GET /33803683/status HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [05/Jan/2024 01:42:18] "GET /33803683/status HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): data-live.flightradar24.com:443
+DEBUG:urllib3.connectionpool:https://data-live.flightradar24.com:443 "GET /clickhandler/?flight=33803683 HTTP/1.1" 200 None
