@@ -6,8 +6,14 @@ from FlightRadar24.api import FlightRadar24API  # Asegúrate de importar adecuad
 import logging
 import sys
 from find_flight_module import find_flight, ArgumentError
+import re
 # url: http://127.0.0.1:<port_number>/<function_name>
 #http://127.0.0.1:5000/obtener_json
+
+def limpiar_cadena(cadena):
+    # Utilizar una expresión regular para eliminar caracteres no deseados
+    cadena_limpia = re.sub(r'[^a-zA-Z0-9\-_/]', '', cadena)
+    return cadena_limpia
 
 def mostrar_error(mensaje):
     print(f"Error: {mensaje}", file=sys.stderr)
@@ -29,9 +35,11 @@ puerto_elegido = int(sys.argv[1])
 selected_flight = None
 # Comprobar primero en el caso de que se quiera seguir a un avión y la matricula 
 # no se encuentre en el registro, lanzar una excpeción para acabar con el programa
-print("Ejecutando: ",opcion,sys.argv[3])
+alfanumContent = limpiar_cadena(sys.argv[3])
+print("Ejecutando: ",opcion,alfanumContent)
+
 try:
-    selected_flight = find_flight(opcion,sys.argv[3])
+    selected_flight = find_flight(opcion,alfanumContent)
 except ArgumentError as e:
     print(f"Error: {e}")
 

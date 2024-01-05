@@ -45,7 +45,7 @@ public class APIConnection {
 
             // Imprimir la salida del script de Python
             outputContent = outputBuilder.toString();
-            System.out.println("Salida del script de Python:" + outputContent);
+            //System.out.println("Salida del script de Python:" + outputContent);
             process.destroy();
 
         } catch (IOException | InterruptedException e) {
@@ -62,7 +62,7 @@ public class APIConnection {
             String scriptPath = workingDir + "/api_service.py";
             //System.out.println(scriptPath);
             // Parámetros para pasar al script de Python
-            String[] scriptParameters = {puerto,opcion, content};
+            String[] scriptParameters = {puerto,opcion,content};
 
             // Crear un proceso para ejecutar el script
             ProcessBuilder processBuilder = new ProcessBuilder("python3", scriptPath);
