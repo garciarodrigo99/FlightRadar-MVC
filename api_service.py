@@ -73,18 +73,21 @@ def get_time():
     
 @app.route(ruta_personalizada + '/info', methods=['GET'])
 def get_info():
-    return jsonify(selected_flight.__dict__)
+    return jsonify(info_json)
 
 def actualizar_datos_json():
     global time_json
+    global info_json
     fr_api = FlightRadar24API()
 
     while True:
+        selected_flight_update = fr_api.get_flights(registration=selected_flight.registration)[0]
         selected_flight_details = fr_api.get_flight_details(selected_flight)
         print(selected_flight_details.get("time")["real"]["arrival"],end="\t")
         print(fr_api.get_flights(registration=selected_flight.registration))
         with lock:
             time_json = selected_flight_details.get("time")
+            info_json = selected_flight_update.__dict__
         
         time.sleep(10)
 
