@@ -59,32 +59,32 @@ ruta_personalizada = '/'+f_id
 #     sys.exit(1)  # Salir con código de error 1
 
 #logging.basicConfig(filename=ruta_personalizada[1:]+'.log', level=logging.DEBUG)
-logging.basicConfig(filename=ruta_personalizada[1:]+'.log', level=logging.DEBUG)
+logging.basicConfig(filename='flask_logs/'+ruta_personalizada[1:]+'.log', level=logging.DEBUG)
 
 # Datos iniciales
-datos_json = {}
+time_json = {}
+info_json = {}
 lock = threading.Lock()
 
-@app.route(ruta_personalizada+'/status', methods=['GET'])
-def obtener_json():
+@app.route(ruta_personalizada + '/status', methods=['GET'])
+def get_time():
     with lock:
-        return jsonify(datos_json)
+        return jsonify(time_json)
     
 @app.route(ruta_personalizada + '/info', methods=['GET'])
-def obtener_info():
-    fr_api = FlightRadar24API()
+def get_info():
     return jsonify(selected_flight.__dict__)
 
 def actualizar_datos_json():
-    global datos_json
+    global time_json
     fr_api = FlightRadar24API()
 
     while True:
         selected_flight_details = fr_api.get_flight_details(selected_flight)
         print(selected_flight_details.get("time")["real"]["arrival"],end="\t")
-        print(selected_flight)
+        print(fr_api.get_flights(registration=selected_flight.registration))
         with lock:
-            datos_json = selected_flight_details.get("time")
+            time_json = selected_flight_details.get("time")
         
         time.sleep(10)
 

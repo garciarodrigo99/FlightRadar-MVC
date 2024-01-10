@@ -4,7 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Ventana extends JFrame {
-    private JLabel label;
+    private JPanel panel;
+    private JScrollPane scrollPane;
 
     private String nombreUsuario;  // Agrega una variable para almacenar el nombre del usuario
 
@@ -19,13 +20,37 @@ public class Ventana extends JFrame {
     }
 
     private void initComponents() {
-        label = new JLabel();
-        add(label, BorderLayout.CENTER);
+        panel = new JPanel();
+        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+
+        // Configura el JScrollPane con barras de desplazamiento en ambas direcciones
+        scrollPane = new JScrollPane(panel, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
+
+        add(scrollPane, BorderLayout.CENTER);
     }
 
     public void mostrarMensaje(String mensaje) {
-        String textoActual = label.getText();
-        String nuevoTexto = textoActual + "\n" + mensaje;
-        label.setText(nuevoTexto);
+
+/*        System.out.println("Cadena original: " + mensaje);
+        System.out.println("ASCII de cada carácter:");
+
+        for (int i = 0; i < mensaje.length(); i++) {
+            char caracter = mensaje.charAt(i);
+            int asciiValue = (int) caracter;
+            System.out.println("'" + caracter + "': " + asciiValue);
+        }*/
+
+        JLabel nuevaLabel = new JLabel(mensaje);
+        panel.add(nuevaLabel);
+
+        // Asegura que el JScrollPane se desplace hacia abajo y hacia los lados automáticamente
+        JScrollBar verticalScrollBar = scrollPane.getVerticalScrollBar();
+        verticalScrollBar.setValue(verticalScrollBar.getMaximum());
+
+        JScrollBar horizontalScrollBar = scrollPane.getHorizontalScrollBar();
+        horizontalScrollBar.setValue(horizontalScrollBar.getMaximum());
+
+        pack();
+        setLocationRelativeTo(null);
     }
 }

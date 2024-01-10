@@ -19,10 +19,10 @@ public class Flight implements suscriptionObject{
 
     protected Estado estado;
 
-    public Flight(String id) {
+    public Flight(String id,String urlPort) {
         // Eliminar salto de linea y espacio en blaco
         this.id = id.substring(0, id.length() - 1);;
-        String url = "http://127.0.0.1:5000/";
+        String url = "http://127.0.0.1:"+urlPort+"/";
         url += this.id;
         JsonNode jsonNode = ReadJsonFromUrl.read(url+"/info");
         this.registration = jsonNode.get("registration").asText();
@@ -43,13 +43,12 @@ public class Flight implements suscriptionObject{
     }
     @Override
     public String getInitialMessage() {
-        String to_return = "Monitorizando vuelo:\n" +
+        String to_return = "-Monitorizando vuelo-\n" +
                 "Id: " + this.id + "\n" +
-                " Matricula: " + this.registration + "\n" +
-                " - Número de vuelo: " + this.fNumber + "\n" +
-                " - aeropuerto origen: " + this.originAptIATA + "\n" +
-                " - aeropuerto destino: " + this.destinationAptIATA + "\n" +
-                " Status:\n";
+                "Matricula: " + this.registration + "\n" +
+                "Número de vuelo: " + this.fNumber + "\n" +
+                this.originAptIATA + "-" + this.destinationAptIATA + "\n" +
+                "Status:\n";
         if (this.status.estimated[0] != 0) {
             System.out.println("estimated departure: " + this.status.estimated[0]);
             to_return += " - Estimated Departure: " + DateFormat.getFormatedDate(this.status.estimated[0]) + "\n";
@@ -91,8 +90,10 @@ public class Flight implements suscriptionObject{
         System.out.println("Estado del vuelo: "+lastEstado);
         updateStatus();
         this.estado = this.estado.checkEstado();
-        if(!lastEstado.equals(this.estado.toString()))
+        if(!lastEstado.equals(this.estado.toString())){
+            System.out.println("checkInformation: "+this.estado.statusString());
             return this.estado.statusString();
+        }
         return null;
     }
 

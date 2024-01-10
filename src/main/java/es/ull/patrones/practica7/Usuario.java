@@ -11,7 +11,12 @@ public class Usuario {
     }
 
     public void recibirAviso(String aviso){
-        ventana.mostrarMensaje(aviso);
+        String[] lineas = aviso.split("\n");
+        for (String linea : lineas) {
+            System.out.println("Linea: "+linea);
+            ventana.mostrarMensaje(linea);
+        }
+        //ventana.mostrarMensaje(aviso);
     }
 
 }

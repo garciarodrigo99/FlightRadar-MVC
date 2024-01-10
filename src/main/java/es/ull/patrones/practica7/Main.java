@@ -13,7 +13,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) throws InterruptedException {
 
-        String flightID = APIConnection.getFlightId("2", "EW4377");
+        String flightID = APIConnection.getFlightId("2", "BA2703");
         System.out.println("Flight ID: " + flightID);
         if (flightID.charAt(0) == '1') {
             mostrarVentanaError("Error seguimiento de vuelo", "No se ha encontrado ningún vuelo en vivo para \nser rastreado con la información proporcionada.");
@@ -28,7 +28,7 @@ public class Main {
         Usuario rodrigo = new Usuario("Rodrigo");
         Usuario enrique = new Usuario("Enrique");
 
-        Flight mad_eze = new Flight(flightID);
+        Flight mad_eze = new Flight(flightID,puerto);
         //TrackerApp editor = new TrackerApp(mad_eze.getId());
         List<Usuario> userlist = Arrays.asList(rodrigo,enrique);
         myEventListener flight1Listener = new FlightListener(userlist);

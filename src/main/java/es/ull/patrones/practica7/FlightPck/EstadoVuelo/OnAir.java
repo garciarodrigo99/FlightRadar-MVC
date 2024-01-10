@@ -24,12 +24,12 @@ public class OnAir extends Estado {
 
     @Override
     public String statusString() {
-        return "Vuelo despegó a "+
+        return "\nVuelo despegó a "+
                 LocalDateTime.ofInstant(Instant.ofEpochSecond(this.flight.getStatus().real[0]), ZoneId.systemDefault())
                         .format(DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss"))+
-                "Hora de llegada prevista: "+
+                "\nHora de llegada prevista: "+
                 LocalDateTime.ofInstant(Instant.ofEpochSecond(this.flight.getStatus().estimated[1]), ZoneId.systemDefault())
-                        .format(DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss"));
+                        .format(DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss"))+"\n";
     }
 }
 

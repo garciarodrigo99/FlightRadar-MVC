@@ -1,0 +1,11 @@
+[
+  {
+    "ruta": "AER1-AER2"
+  },
+  {
+    "ruta": "AER2-AER3"
+  },
+  {
+    "ruta": "AER3-AER1"
+  }
+]

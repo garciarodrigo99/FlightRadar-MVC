@@ -23,8 +23,8 @@ public class Landed extends Estado {
     }
     @Override
     public String statusString() {
-        return "Vuelo aterrizó a "+
+        return "\nVuelo aterrizó a "+
                 LocalDateTime.ofInstant(Instant.ofEpochSecond(this.flight.getStatus().real[1]), ZoneId.systemDefault())
-                        .format(DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss"));
+                        .format(DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss"))+"\n";
     }
 }

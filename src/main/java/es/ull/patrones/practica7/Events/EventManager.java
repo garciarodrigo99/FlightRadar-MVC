@@ -46,8 +46,10 @@ public class EventManager {
         while(true){
             for (suscriptionObject so : listeners.keySet()) {
                 String aviso = so.checkInformation();
-                if (aviso != null)
+                if (aviso != null){
+                    System.out.println("checkEvents: "+aviso);
                     notifyObservers(so,aviso);
+                }
             }
             Thread.sleep(10000);
         }
