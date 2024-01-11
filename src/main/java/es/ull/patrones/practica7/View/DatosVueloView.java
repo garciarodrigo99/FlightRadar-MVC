@@ -65,6 +65,7 @@ public class DatosVueloView extends JPanel {
         infoPanel.add(createInfoLabel("Fecha y Hora:"));
         infoPanel.add(fechaHoraLabel);
 
+
         return infoPanel;
     }
 

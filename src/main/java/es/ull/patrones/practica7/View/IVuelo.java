@@ -1,4 +1,7 @@
 package es.ull.patrones.practica7.View;
+import es.ull.patrones.practica7.TimeSeriesChartPanel;
+import es.ull.patrones.practica7.TimeSeriesChartPanel;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -12,8 +15,7 @@ public class IVuelo extends JFrame {
     private JTextField cuadroTexto;
     private JButton botonAccion;
     private DatosVueloView datosVueloView;
-    private GraficaView graficaViewAltitud;
-    private GraficaView graficaViewVelocidad;
+
     private ImagenView imagenView;
     private BarraProgresion barraProgresion;
 
@@ -79,21 +81,38 @@ public class IVuelo extends JFrame {
 
         // Crear las vistas para cada panel
         datosVueloView = new DatosVueloView();
-        graficaViewAltitud = new GraficaView("Tiempo", "Altitud", Color.CYAN);
-        graficaViewVelocidad = new GraficaView("Tiempo", "Velocidad", Color.YELLOW);
+        TimeSeriesChartPanel chartVelocidad = new TimeSeriesChartPanel("Ejemplo de Gráfico de Hora de Unix",
+                "Hora",
+                "Velocidad");
+        chartVelocidad.insertarDatos(1704911708, 10);
+        chartVelocidad.insertarDatos(1704911641, 20);
+        chartVelocidad.insertarDatos(1704981775, 30);
+
+        TimeSeriesChartPanel chartAltitud = new TimeSeriesChartPanel("Ejemplo de Gráfico de Hora de Unix",
+                "Hora",
+                "Velocidad");
+        chartAltitud.insertarDatos(1704911708, 10);
+        chartAltitud.insertarDatos(1704911641, 20);
+        chartAltitud.insertarDatos(1704981775, 30);
+        //chart.mostrar();
+        //graficaViewAltitud = new GraficaView("Tiempo", "Altitud", Color.CYAN);
+        //graficaViewVelocidad = new GraficaView("Tiempo", "Velocidad", Color.YELLOW);
         imagenView = new ImagenView(DescargarYMostrarImagen.imagenfromURL("http://www.gcmap.com/map?P=c:%23ce0c87,TFN-LPA/MAD/LHR/JFK,MAD-BCN&MS=wls2&MR=540&MX=720x360&PM=*"));
         barraProgresion = new BarraProgresion();
 
         // Crear el JSplitPane principal para dividir la ventana en dos secciones verticales
-        JSplitPane splitPaneVerticalIzquierda = new JSplitPane(JSplitPane.VERTICAL_SPLIT, graficaViewAltitud, imagenView);
+        JSplitPane splitPaneVerticalIzquierda = new JSplitPane(JSplitPane.VERTICAL_SPLIT, chartVelocidad, imagenView);
         splitPaneVerticalIzquierda.setDividerLocation(300);  // Ajusta la altura del panel superior
 
+        JScrollPane scrollPaneIzquierda = new JScrollPane(splitPaneVerticalIzquierda);
+
+
         // Crear el JSplitPane principal para dividir la ventana en dos secciones verticales
-        JSplitPane splitPaneVerticalDerecha = new JSplitPane(JSplitPane.VERTICAL_SPLIT, graficaViewVelocidad, barraProgresion);
-        splitPaneVerticalIzquierda.setDividerLocation(500);  // Ajusta la altura del panel superior
+        JSplitPane splitPaneVerticalDerecha = new JSplitPane(JSplitPane.VERTICAL_SPLIT, chartAltitud, barraProgresion);
+        splitPaneVerticalIzquierda.setDividerLocation(650);  // Ajusta la altura del panel superior
 
         // Crear el JSplitPane adicional para dividir la parte derecha en dos secciones horizontales
-        JSplitPane splitPaneHorizontalDerecha = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, datosVueloView, splitPaneVerticalIzquierda);
+        JSplitPane splitPaneHorizontalDerecha = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, datosVueloView, scrollPaneIzquierda);
         splitPaneHorizontalDerecha.setDividerLocation(300);  // Ajusta la ubicación del divisor vertical
 
         // Crear el JSplitPane adicional para dividir la parte derecha en cuatro secciones
