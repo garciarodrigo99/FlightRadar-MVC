@@ -3,17 +3,16 @@ package es.ull.patrones.practica7;
 import es.ull.patrones.practica7.Connection.APIConnection;
 import es.ull.patrones.practica7.Connection.FreePortFinder;
 import es.ull.patrones.practica7.Events.*;
-import es.ull.patrones.practica7.FlightPck.Flight;
+import es.ull.patrones.practica7.FlightPck.Flight.Flight;
 
 import javax.swing.*;
 import java.util.Arrays;
-import java.util.EventListener;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
 
-        String flightID = APIConnection.getFlightId("2", "UX25");
+        String flightID = APIConnection.getFlightId("2", "DE1478");
         System.out.println("Flight ID: " + flightID);
         if (flightID.charAt(0) == '1') {
             mostrarVentanaError("Error seguimiento de vuelo", "No se ha encontrado ningún vuelo en vivo para \nser rastreado con la información proporcionada.");

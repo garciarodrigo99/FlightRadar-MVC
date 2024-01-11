@@ -1,24 +1,28 @@
-package es.ull.patrones.practica7.FlightPck;
+package es.ull.patrones.practica7.FlightPck.Flight;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import es.ull.patrones.practica7.Connection.ReadJsonFromUrl;
 import es.ull.patrones.practica7.DateFormat;
-import es.ull.patrones.practica7.FlightPck.EstadoVuelo.BeforeTO;
-import es.ull.patrones.practica7.FlightPck.EstadoVuelo.Estado;
-import es.ull.patrones.practica7.FlightPck.EstadoVuelo.Landed;
-import es.ull.patrones.practica7.FlightPck.EstadoVuelo.OnAir;
+import es.ull.patrones.practica7.FlightPck.Airport.Airport;
+import es.ull.patrones.practica7.FlightPck.Flight.EstadoVuelo.BeforeTO;
+import es.ull.patrones.practica7.FlightPck.Flight.EstadoVuelo.Estado;
+import es.ull.patrones.practica7.FlightPck.Flight.EstadoVuelo.Landed;
+import es.ull.patrones.practica7.FlightPck.Flight.EstadoVuelo.OnAir;
+import es.ull.patrones.practica7.FlightPck.suscriptionObject;
 
-public class Flight implements suscriptionObject{
+public class Flight implements suscriptionObject {
     private String id;
     private String registration;
     private String fNumber;
-    private String originAptIATA;
-    private String destinationAptIATA;
+    private Airport origin;
+    private Airport destination;
     private Status status;
 
     protected String serverURL;
 
     protected String infoURL;
+
+    protected String airportsURL;
 
     protected String statusURL;
 
@@ -34,6 +38,8 @@ public class Flight implements suscriptionObject{
 
         setInfoData();
 
+        setAirportsData();
+
         setStatusData();
         
         setHistoryData();
@@ -44,8 +50,13 @@ public class Flight implements suscriptionObject{
         JsonNode infoJsonNode = ReadJsonFromUrl.read(this.infoURL);
         this.registration = infoJsonNode.get("registration").asText();
         this.fNumber = infoJsonNode.get("number").asText();
-        this.originAptIATA = infoJsonNode.get("origin_airport_iata").asText();
-        this.destinationAptIATA = infoJsonNode.get("destination_airport_iata").asText();
+    }
+
+    private void setAirportsData() {
+        this.airportsURL = this.serverURL+"/airports";
+        JsonNode airportsJsonNode = ReadJsonFromUrl.read(this.airportsURL);
+        this.origin = new Airport(airportsJsonNode.get("origin"));
+        this.destination = new Airport(airportsJsonNode.get("destination"));
     }
 
     private void setStatusData(){
@@ -87,7 +98,7 @@ public class Flight implements suscriptionObject{
                 "Id: " + this.id + "\n" +
                 "Matricula: " + this.registration + "\n" +
                 "Número de vuelo: " + this.fNumber + "\n" +
-                this.originAptIATA + "-" + this.destinationAptIATA + "\n" +
+                this.origin.getCode().getIata() + "-" + this.destination.getCode().getIata() + "\n" +
                 "Status:\n";
         if (this.status.estimated[0] != 0) {
             System.out.println("estimated departure: " + this.status.estimated[0]);

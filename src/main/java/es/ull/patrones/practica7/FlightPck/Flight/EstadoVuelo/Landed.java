@@ -1,6 +1,6 @@
-package es.ull.patrones.practica7.FlightPck.EstadoVuelo;
+package es.ull.patrones.practica7.FlightPck.Flight.EstadoVuelo;
 
-import es.ull.patrones.practica7.FlightPck.Flight;
+import es.ull.patrones.practica7.FlightPck.Flight.Flight;
 
 import java.time.Instant;
 import java.time.LocalDateTime;
