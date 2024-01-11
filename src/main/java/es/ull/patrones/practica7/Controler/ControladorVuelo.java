@@ -88,16 +88,16 @@ public class ControladorVuelo extends JFrame {
 
         // Crear las vistas para cada panel
         datosVueloView = new DatosVueloView(this.flightSelected);
-        TimeSeriesChartPanel chartVelocidad = new TimeSeriesChartPanel("Ejemplo de Gráfico de Hora de Unix",
+        TimeSeriesChartPanel chartVelocidad = new TimeSeriesChartPanel("Tiempo-Velocidad",
                 "Hora",
-                "Velocidad");
-        chartVelocidad.insertarDatos(1704911708, 10);
+                "Velocidad(knots)");
+        chartVelocidad.insertarDatos(flightSelected.getListaVelocidad());
 
 
-        TimeSeriesChartPanel chartAltitud = new TimeSeriesChartPanel("Ejemplo de Gráfico de Hora de Unix",
+        TimeSeriesChartPanel chartAltitud = new TimeSeriesChartPanel("Tiempo-Altitud",
                 "Hora",
-                "Velocidad");
-        chartAltitud.insertarDatos(1704911708, 10);
+                "Altitud(ft)");
+        chartAltitud.insertarDatos(flightSelected.getListaAltitud());
 
         //chart.mostrar();
         //graficaViewAltitud = new GraficaView("Tiempo", "Altitud", Color.CYAN);
