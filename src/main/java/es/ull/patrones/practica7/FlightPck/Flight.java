@@ -31,24 +31,47 @@ public class Flight implements suscriptionObject{
         this.id = id.substring(0, id.length() - 1);
         
         this.serverURL = "http://127.0.0.1:"+urlPort+"/"+this.id;
+
+        setInfoData();
+
+        setStatusData();
         
-        JsonNode infoJsonNode = ReadJsonFromUrl.read(this.serverURL+"/info");
+        setHistoryData();
+    }
+
+    private void setInfoData(){
+        this.infoURL = this.serverURL+"/info";
+        JsonNode infoJsonNode = ReadJsonFromUrl.read(this.infoURL);
         this.registration = infoJsonNode.get("registration").asText();
         this.fNumber = infoJsonNode.get("number").asText();
         this.originAptIATA = infoJsonNode.get("origin_airport_iata").asText();
         this.destinationAptIATA = infoJsonNode.get("destination_airport_iata").asText();
-        
+    }
+
+    private void setStatusData(){
         this.statusURL = this.serverURL+"/status";
         this.status = new Status(ReadJsonFromUrl.read(this.statusURL));
-        setEstado();
-        
+
+        if (this.status.real[0] == 0){
+            this.estado = new BeforeTO(this);
+        } else if (this.status.real[1] == 0){
+            this.estado = new OnAir(this);
+        } else {
+            this.estado = new Landed(this);
+        }
+    }
+
+    private void setHistoryData(){
         JsonNode historyJsonNode = ReadJsonFromUrl.read(this.serverURL+"/history");
+        String allRoutes = "c:#01b3a8,";
         // Recorrer el JsonNode e imprimir cada elemento
         System.out.println("Recorriendo vector de rutas:");
         for (JsonNode nodo : historyJsonNode) {
             String ruta = nodo.asText();
+            allRoutes += ruta + ',';
             System.out.println(ruta);
         }
+        System.out.println(allRoutes);
     }
 
     public String getId(){
@@ -92,15 +115,7 @@ public class Flight implements suscriptionObject{
     private void updateStatus(){
         this.status = new Status(ReadJsonFromUrl.read(this.statusURL));
     }
-    private void setEstado(){
-        if (this.status.real[0] == 0){
-            this.estado = new BeforeTO(this);
-        } else if (this.status.real[1] == 0){
-            this.estado = new OnAir(this);
-        } else {
-            this.estado = new Landed(this);
-        }
-    }
+
 
     public String getRecentFlightsImageURL() {
 
