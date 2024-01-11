@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Flight implements suscriptionObject {
+
     private String id;
     private String registration;
     private String fNumber;
@@ -40,6 +41,11 @@ public class Flight implements suscriptionObject {
     protected String recentFlightsImageURL;
     private String trailURL;
 
+    private String airlineICAO;
+    private String aircraftCode;
+    private int speed;
+    private int altitud;
+
     public Flight(String id,String urlPort) {
         // Eliminar salto de linea y espacio en blaco
         this.id = id.substring(0, id.length() - 1);
@@ -55,6 +61,17 @@ public class Flight implements suscriptionObject {
         setHistoryData();
 
         setTrail();
+    }
+
+    private void setInfoData(){
+        this.infoURL = this.serverURL+"/info";
+        JsonNode infoJsonNode = ReadJsonFromUrl.read(this.infoURL);
+        this.registration = infoJsonNode.get("registration").asText();
+        this.fNumber = infoJsonNode.get("number").asText();
+        this.airlineICAO = infoJsonNode.get("airline_icao").asText();
+        this.aircraftCode = infoJsonNode.get("aircraft_code").asText();
+        this.speed = infoJsonNode.get("ground_speed").asInt();
+        this.altitud = infoJsonNode.get("altitude").asInt();
     }
 
     private void setTrail() {
@@ -75,23 +92,6 @@ public class Flight implements suscriptionObject {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
-    }
-
-    public List<Pair<Long, Integer>> getListaVelocidad() {
-        return listaVelocidad;
-    }
-
-    public List<Pair<Long, Integer>> getListaAltitud() {
-        return listaAltitud;
-    }
-
-    private void setInfoData(){
-        this.infoURL = this.serverURL+"/info";
-        JsonNode infoJsonNode = ReadJsonFromUrl.read(this.infoURL);
-        this.registration = infoJsonNode.get("registration").asText();
-        this.fNumber = infoJsonNode.get("number").asText();
     }
 
     private void setAirportsData() {
@@ -132,10 +132,54 @@ public class Flight implements suscriptionObject {
     public String getId(){
         return this.id;
     }
+    public String getRegistration() {
+        return registration;
+    }
+
+    public String getfNumber() {
+        return fNumber;
+    }
+
+    public Airport getOrigin() {
+        return origin;
+    }
+
+    public Airport getDestination() {
+        return destination;
+    }
+
+    public List<Pair<Long, Integer>> getListaVelocidad() {
+        return listaVelocidad;
+    }
+
+    public List<Pair<Long, Integer>> getListaAltitud() {
+        return listaAltitud;
+    }
+
+    public int getDistanciaVuelo() {
+        return distanciaVuelo;
+    }
 
     public Status getStatus(){
         return this.status;
     }
+
+    public String getAirlineICAO() {
+        return airlineICAO;
+    }
+
+    public String getAircraftCode() {
+        return aircraftCode;
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    public int getAltitud() {
+        return altitud;
+    }
+
     @Override
     public String getInitialMessage() {
         String to_return = "-Monitorizando vuelo-\n" +

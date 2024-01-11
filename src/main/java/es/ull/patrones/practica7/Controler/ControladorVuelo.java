@@ -1,4 +1,5 @@
 package es.ull.patrones.practica7.Controler;
+import es.ull.patrones.practica7.FlightPck.Flight.Flight;
 import es.ull.patrones.practica7.View.TimeSeriesChartPanel;
 import es.ull.patrones.practica7.View.BarraProgresion;
 import es.ull.patrones.practica7.View.DatosVueloView;
@@ -11,7 +12,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class IVuelo extends JFrame {
+public class ControladorVuelo extends JFrame {
 
     private CardLayout cardLayout;
     private JPanel cardPanel;
@@ -22,8 +23,10 @@ public class IVuelo extends JFrame {
 
     private ImagenView imagenView;
     private BarraProgresion barraProgresion;
+    private Flight flightSelected;
 
-    public IVuelo() {
+    public ControladorVuelo(Flight flightSelected) {
+        this.flightSelected = flightSelected;
         // Configuración de la ventana
         setPreferredSize(new Dimension(400, 300));  // Tamaño inicial
         pack();
@@ -56,8 +59,8 @@ public class IVuelo extends JFrame {
         botonAccion = new JButton("Continuar");
 
         // Personalizar el botón
-        botonAccion.setBackground(new Color(50, 205, 50)); // Verde
-        botonAccion.setForeground(Color.WHITE);
+        botonAccion.setBackground(new Color(175,197,219));
+        botonAccion.setForeground(Color.BLACK);
         botonAccion.setFocusPainted(false);
 
         // Configurar el ActionListener para el botón
@@ -84,7 +87,7 @@ public class IVuelo extends JFrame {
         entradaPanel.add(botonAccion);
 
         // Crear las vistas para cada panel
-        datosVueloView = new DatosVueloView();
+        datosVueloView = new DatosVueloView(this.flightSelected);
         TimeSeriesChartPanel chartVelocidad = new TimeSeriesChartPanel("Ejemplo de Gráfico de Hora de Unix",
                 "Hora",
                 "Velocidad");
@@ -134,9 +137,5 @@ public class IVuelo extends JFrame {
 
         // Hacer visible la ventana
         setVisible(true);
-    }
-
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> new IVuelo());
     }
 }

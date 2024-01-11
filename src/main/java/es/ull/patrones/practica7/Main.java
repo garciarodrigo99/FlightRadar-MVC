@@ -2,6 +2,7 @@ package es.ull.patrones.practica7;
 
 import es.ull.patrones.practica7.Connection.APIConnection;
 import es.ull.patrones.practica7.Connection.FreePortFinder;
+import es.ull.patrones.practica7.Controler.ControladorVuelo;
 import es.ull.patrones.practica7.Events.*;
 import es.ull.patrones.practica7.FlightPck.Flight.Flight;
 import org.apache.commons.lang3.tuple.Pair;
@@ -12,16 +13,8 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
-/*
-        TimeSeriesChart chart = new TimeSeriesChart("Ejemplo de Gráfico de Hora de Unix",
-                "Hora",
-                "Velocidad");
-        chart.insertarDatos(1704911708, 10);
-        chart.insertarDatos(1704911641, 20);
-        chart.insertarDatos(1704981775, 30);
-        chart.mostrar();*/
 
-        String flightID = APIConnection.getFlightId("2", "TP57");
+        String flightID = APIConnection.getFlightId("2", "QR705");
         System.out.println("Flight ID: " + flightID);
         if (flightID.charAt(0) == '1') {
             mostrarVentanaError("Error seguimiento de vuelo", "No se ha encontrado ningún vuelo en vivo para \nser rastreado con la información proporcionada.");
@@ -33,27 +26,11 @@ public class Main {
         Thread apiThread = new Thread(() -> APIConnection.loadConnection(puerto,"-i",flightID));
         apiThread.start();
         Thread.sleep(10000);
-        Usuario rodrigo = new Usuario("Rodrigo");
-        Usuario enrique = new Usuario("Enrique");
-
-
 
         Flight myFlight = new Flight(flightID,puerto);
-        TimeSeriesChart chartAltitud = new TimeSeriesChart("Ejemplo de Gráfico de Hora de Unix",
-                "Hora(GMT)",
-                "Altitud(ft)");
-        chartAltitud.insertarDatos(myFlight.getListaAltitud());
-        chartAltitud.mostrar();
-        TimeSeriesChart chartVelocidad = new TimeSeriesChart("Ejemplo de Gráfico de Hora de Unix",
-                "Hora(GMT)",
-                "Velocidad(ft)");
-        chartVelocidad.insertarDatos(myFlight.getListaVelocidad());
-        chartVelocidad.mostrar();
-        List<Usuario> userlist = Arrays.asList(rodrigo,enrique);
-        myEventListener flight1Listener = new FlightListener(userlist);
-        EventManager em = new EventManager(myFlight,flight1Listener);
-        TrackerApp ta = new TrackerApp(em);
-        ta.start();
+
+        SwingUtilities.invokeLater(() -> new ControladorVuelo(myFlight));
+
         apiThread.interrupt();
 
     }
