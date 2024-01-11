@@ -65,7 +65,7 @@ logging.basicConfig(filename='flask_logs/'+ruta_personalizada[1:]+'.log', level=
 # Datos iniciales
 time_json = {}
 info_json = {}
-history_json = {}
+airports_json = {}
 lock = threading.Lock()
 
 @app.route(ruta_personalizada + '/status', methods=['GET'])
@@ -81,12 +81,16 @@ def get_info():
 def get_history():
     return jsonify(obtener_rutas_aereas(selected_flight.id))
 
+@app.route(ruta_personalizada + '/airports', methods=['GET'])
+def get_airports():
+    return jsonify(airports_json)
+
 def actualizar_datos_json():
     global time_json
     global info_json
-    global history_json
+    global airports_json
     fr_api = FlightRadar24API()
-
+    airports_json = fr_api.get_flight_details(selected_flight).get("airport")
     while True:
         selected_flight_update = fr_api.get_flights(registration=selected_flight.registration)[0]
         selected_flight_details = fr_api.get_flight_details(selected_flight)
