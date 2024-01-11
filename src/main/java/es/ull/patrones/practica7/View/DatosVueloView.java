@@ -1,6 +1,6 @@
 package es.ull.patrones.practica7.View;
 import es.ull.patrones.practica7.DateFormat;
-import es.ull.patrones.practica7.FlightPck.Flight.Flight;
+import es.ull.patrones.practica7.Model.Flight.Flight;
 
 import javax.swing.*;
 import java.awt.*;

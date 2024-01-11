@@ -1,5 +1,6 @@
 package es.ull.patrones.practica7.View;
 
+import org.apache.commons.lang3.tuple.Pair;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
@@ -13,6 +14,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
+
+import org.apache.commons.lang3.tuple.Pair;
 
 public class TimeSeriesChartPanel extends JPanel {
 
@@ -51,8 +55,13 @@ public class TimeSeriesChartPanel extends JPanel {
         add(chartPanel);
     }
 
-    public void insertarDatos(int unixDate, int value) {
+    public void insertarDatos(Long unixDate, Integer value) {
         timeSeries.addOrUpdate(new Second(new Date(unixDate * 1000L)), value);
     }
 
+    public void insertarDatos(List<Pair<Long,Integer>> valueList) {
+        for (Pair<Long,Integer> reg : valueList){
+            insertarDatos(reg.getLeft(),reg.getRight());
+        }
+    }
 }

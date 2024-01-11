@@ -1,9 +1,9 @@
 package es.ull.patrones.practica7.Controler;
-import es.ull.patrones.practica7.FlightPck.Flight.Flight;
+import es.ull.patrones.practica7.Model.Flight.Flight;
 import es.ull.patrones.practica7.View.TimeSeriesChartPanel;
 import es.ull.patrones.practica7.View.BarraProgresion;
 import es.ull.patrones.practica7.View.DatosVueloView;
-import es.ull.patrones.practica7.View.DescargarYMostrarImagen;
+import es.ull.patrones.practica7.View.mostrarImagenes;
 import es.ull.patrones.practica7.View.ImagenView;
 
 
@@ -92,19 +92,17 @@ public class ControladorVuelo extends JFrame {
                 "Hora",
                 "Velocidad");
         chartVelocidad.insertarDatos(1704911708, 10);
-        chartVelocidad.insertarDatos(1704911641, 20);
-        chartVelocidad.insertarDatos(1704981775, 30);
+
 
         TimeSeriesChartPanel chartAltitud = new TimeSeriesChartPanel("Ejemplo de Gráfico de Hora de Unix",
                 "Hora",
                 "Velocidad");
         chartAltitud.insertarDatos(1704911708, 10);
-        chartAltitud.insertarDatos(1704911641, 20);
-        chartAltitud.insertarDatos(1704981775, 30);
+
         //chart.mostrar();
         //graficaViewAltitud = new GraficaView("Tiempo", "Altitud", Color.CYAN);
         //graficaViewVelocidad = new GraficaView("Tiempo", "Velocidad", Color.YELLOW);
-        imagenView = new ImagenView(DescargarYMostrarImagen.imagenfromURL("http://www.gcmap.com/map?P=c:%23ce0c87,TFN-LPA/MAD/LHR/JFK,MAD-BCN&MS=wls2&MR=540&MX=720x360&PM=*"));
+        imagenView = new ImagenView(mostrarImagenes.imagenfromURL(this.flightSelected.getRecentFlightsImageURL()));
         barraProgresion = new BarraProgresion();
 
         // Crear el JSplitPane principal para dividir la ventana en dos secciones verticales

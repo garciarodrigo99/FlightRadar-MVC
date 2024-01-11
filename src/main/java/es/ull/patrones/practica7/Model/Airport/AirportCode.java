@@ -1,4 +1,4 @@
-package es.ull.patrones.practica7.FlightPck.Airport;
+package es.ull.patrones.practica7.Model.Airport;
 
 public class AirportCode {
     private String iata;

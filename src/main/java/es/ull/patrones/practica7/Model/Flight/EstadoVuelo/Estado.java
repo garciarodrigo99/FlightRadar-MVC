@@ -1,6 +1,6 @@
-package es.ull.patrones.practica7.FlightPck.Flight.EstadoVuelo;
+package es.ull.patrones.practica7.Model.Flight.EstadoVuelo;
 
-import es.ull.patrones.practica7.FlightPck.Flight.Flight;
+import es.ull.patrones.practica7.Model.Flight.Flight;
 
 public abstract class Estado {
 

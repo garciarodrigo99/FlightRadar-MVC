@@ -1,4 +1,4 @@
-package es.ull.patrones.practica7.FlightPck.Flight;
+package es.ull.patrones.practica7.Model.Flight;
 
 import com.fasterxml.jackson.databind.JsonNode;
 

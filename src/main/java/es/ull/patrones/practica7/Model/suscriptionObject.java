@@ -1,6 +1,4 @@
-package es.ull.patrones.practica7.FlightPck;
-
-import es.ull.patrones.practica7.DateFormat;
+package es.ull.patrones.practica7.Model;
 
 public interface suscriptionObject {
     String getId();

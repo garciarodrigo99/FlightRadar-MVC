@@ -3,13 +3,9 @@ package es.ull.patrones.practica7;
 import es.ull.patrones.practica7.Connection.APIConnection;
 import es.ull.patrones.practica7.Connection.FreePortFinder;
 import es.ull.patrones.practica7.Controler.ControladorVuelo;
-import es.ull.patrones.practica7.Events.*;
-import es.ull.patrones.practica7.FlightPck.Flight.Flight;
-import org.apache.commons.lang3.tuple.Pair;
+import es.ull.patrones.practica7.Model.Flight.Flight;
 
 import javax.swing.*;
-import java.util.Arrays;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {

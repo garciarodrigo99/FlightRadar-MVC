@@ -1,18 +1,23 @@
-package es.ull.patrones.practica7.FlightPck.Flight;
+package es.ull.patrones.practica7.Model.Flight;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import es.ull.patrones.practica7.Connection.ReadJsonFromUrl;
 import es.ull.patrones.practica7.DateFormat;
-import es.ull.patrones.practica7.FlightPck.Airport.Airport;
-import es.ull.patrones.practica7.FlightPck.Distancia;
-import es.ull.patrones.practica7.FlightPck.Flight.EstadoVuelo.BeforeTO;
-import es.ull.patrones.practica7.FlightPck.Flight.EstadoVuelo.Estado;
-import es.ull.patrones.practica7.FlightPck.Flight.EstadoVuelo.Landed;
-import es.ull.patrones.practica7.FlightPck.Flight.EstadoVuelo.OnAir;
-import es.ull.patrones.practica7.FlightPck.suscriptionObject;
+import es.ull.patrones.practica7.Model.Airport.Airport;
+import es.ull.patrones.practica7.Model.Distancia;
+import es.ull.patrones.practica7.Model.Flight.EstadoVuelo.BeforeTO;
+import es.ull.patrones.practica7.Model.Flight.EstadoVuelo.Estado;
+import es.ull.patrones.practica7.Model.Flight.EstadoVuelo.Landed;
+import es.ull.patrones.practica7.Model.Flight.EstadoVuelo.OnAir;
+import es.ull.patrones.practica7.Model.suscriptionObject;
 import org.apache.commons.lang3.tuple.Pair;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
 
+import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,6 +32,11 @@ public class Flight implements suscriptionObject {
     private Status status;
     protected List<Pair<Long,Integer>> listaVelocidad = new ArrayList<>();
     protected List<Pair<Long,Integer>> listaAltitud = new ArrayList<>();
+    private String airlineICAO;
+    private String aircraftCode;
+    private int speed;
+    private int altitud;
+    private String history;
 
     protected String serverURL;
 
@@ -40,11 +50,6 @@ public class Flight implements suscriptionObject {
 
     protected String recentFlightsImageURL;
     private String trailURL;
-
-    private String airlineICAO;
-    private String aircraftCode;
-    private int speed;
-    private int altitud;
 
     public Flight(String id,String urlPort) {
         // Eliminar salto de linea y espacio en blaco
@@ -118,7 +123,8 @@ public class Flight implements suscriptionObject {
 
     private void setHistoryData(){
         JsonNode historyJsonNode = ReadJsonFromUrl.read(this.serverURL+"/history");
-        String allRoutes = "c:#01b3a8,";
+        //String allRoutes = "c:#01b3a8,";
+        String allRoutes = "";
         // Recorrer el JsonNode e imprimir cada elemento
         System.out.println("Recorriendo vector de rutas:");
         for (JsonNode nodo : historyJsonNode) {
@@ -127,6 +133,7 @@ public class Flight implements suscriptionObject {
             System.out.println(ruta);
         }
         System.out.println(allRoutes);
+        this.history = allRoutes;
     }
 
     public String getId(){
@@ -218,7 +225,33 @@ public class Flight implements suscriptionObject {
 
 
     public String getRecentFlightsImageURL() {
+        String webURL = "http://www.gcmap.com";
+        String mapGeneratorURL = webURL + "/mapui?P=c:%23ce0c87,"+this.history +"&MS=wls2";
+        //Image imagen = null;
+        try {
+            // Realizar la solicitud HTTP para obtener el contenido de la página
+            Document doc = Jsoup.connect(mapGeneratorURL).get();
 
+            // Seleccionar el elemento img dentro de la estructura de divs dada
+            Element imgElement = doc.select("div#wrapper div#mid div#map_body.sect-show div#map_div img#map_image.map-image").first();
+
+            // Verificar si se encontró el elemento y obtener el atributo 'src'
+            if (imgElement != null) {
+                String src = imgElement.attr("src");
+                System.out.println("URL de la imagen: " + src);
+
+                // Descargar la imagen y mostrarla en una ventana Swing
+                URL url = new URL(webURL + src);
+
+                this.recentFlightsImageURL = String.valueOf(url);
+                //imagen = ImageIO.read(url);
+                System.out.println(url);
+            } else {
+                System.out.println("No se encontró la imagen en la estructura proporcionada.");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         return recentFlightsImageURL;
     }
 

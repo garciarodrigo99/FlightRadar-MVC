@@ -6,17 +6,16 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
 import javax.imageio.ImageIO;
-import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
 
-public class DescargarYMostrarImagen {
+public class mostrarImagenes {
 
-    public static void main(String[] args) {
+    public static Image imagenFromDestinos(String destinos) {
         String webURL = "http://www.gcmap.com";
-        String mapGeneratorURL = webURL + "/mapui?P=c:%23ce0c87,TFN-LPA/MAD/LHR/JFK,MAD-BCN&MS=wls2";
-
+        String mapGeneratorURL = webURL + "/mapui?P=c:%23ce0c87,"+destinos+"&MS=wls2";
+        Image imagen = null;
         try {
             // Realizar la solicitud HTTP para obtener el contenido de la página
             Document doc = Jsoup.connect(mapGeneratorURL).get();
@@ -30,36 +29,16 @@ public class DescargarYMostrarImagen {
                 System.out.println("URL de la imagen: " + src);
 
                 // Descargar la imagen y mostrarla en una ventana Swing
-                descargarYMostrarImagen(webURL + src);
-                System.out.println(webURL + src);
+                URL url = new URL(webURL + src);
+                imagen = ImageIO.read(url);
+                System.out.println(url);
             } else {
                 System.out.println("No se encontró la imagen en la estructura proporcionada.");
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    private static void descargarYMostrarImagen(String imageUrl) {
-        try {
-            // Descargar la imagen desde la URL
-            URL url = new URL(imageUrl);
-            Image imagen = ImageIO.read(url);
-
-            // Crear un JLabel para mostrar la imagen
-            JLabel label = new JLabel(new ImageIcon(imagen));
-
-            // Crear un JFrame para mostrar la imagen
-            JFrame frame = new JFrame("Imagen Descargada");
-            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            frame.getContentPane().add(label);
-            frame.pack();
-            frame.setLocationRelativeTo(null);
-            frame.setVisible(true);
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        return imagen;
     }
 
     public static Image imagenfromURL(String imageUrl) {
@@ -68,8 +47,6 @@ public class DescargarYMostrarImagen {
             // Descargar la imagen desde la URL
             URL url = new URL(imageUrl);
             imagen = ImageIO.read(url);
-
-
 
         } catch (IOException e) {
             e.printStackTrace();

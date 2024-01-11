@@ -1,9 +1,9 @@
-package es.ull.patrones.practica7.FlightPck.Airport;
+package es.ull.patrones.practica7.Model.Airport;
 
 import com.fasterxml.jackson.databind.JsonNode;
-import es.ull.patrones.practica7.FlightPck.Country;
-import es.ull.patrones.practica7.FlightPck.Position;
-import es.ull.patrones.practica7.FlightPck.Timezone;
+import es.ull.patrones.practica7.Model.Country;
+import es.ull.patrones.practica7.Model.Position;
+import es.ull.patrones.practica7.Model.Timezone;
 
 public class Airport {
     private String name;

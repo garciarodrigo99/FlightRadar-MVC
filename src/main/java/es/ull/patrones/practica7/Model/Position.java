@@ -1,4 +1,4 @@
-package es.ull.patrones.practica7.FlightPck;
+package es.ull.patrones.practica7.Model;
 
 public class Position {
     private double latitude;

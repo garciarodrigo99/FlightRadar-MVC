@@ -1,7 +1,7 @@
 package es.ull.patrones.practica7.Events;
 
 
-import es.ull.patrones.practica7.FlightPck.*;
+import es.ull.patrones.practica7.Model.*;
 
 import java.util.*;
 
