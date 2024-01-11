@@ -15,8 +15,10 @@ public class DatosVueloView extends JPanel {
     private JLabel aerolineaLabel;
     private JLabel tipoAeronaveLabel;
     private JLabel aeropuertoOrigenLabel;
+    private JLabel ciudadOrigenLabel;
 
     private JLabel aeropuertoDestinoLabel;
+    private JLabel ciudadDestinoLabel;
     private JLabel estadoVueloLabel;
     private JLabel velocidadAltitudLabel;
     private JLabel horaSalidaProgramadaLabel;
@@ -37,7 +39,9 @@ public class DatosVueloView extends JPanel {
         aerolineaLabel = createStyledLabel();
         tipoAeronaveLabel = createStyledLabel();
         aeropuertoOrigenLabel = createStyledLabel();
+        ciudadOrigenLabel = createStyledLabel();
         aeropuertoDestinoLabel = createStyledLabel();
+        ciudadDestinoLabel = createStyledLabel();
         estadoVueloLabel = createStyledLabel();
         velocidadAltitudLabel = createStyledLabel();
         horaSalidaProgramadaLabel = createStyledLabel();
@@ -73,22 +77,28 @@ public class DatosVueloView extends JPanel {
         idVueloLabel.setText(myFlight.getId());
         infoPanel.add(idVueloLabel);
         infoPanel.add(createInfoLabel("Aerolínea:"));
-        aerolineaLabel.setText("1234");
+        aerolineaLabel.setText(myFlight.getAirlineICAO());
         infoPanel.add(aerolineaLabel);
         infoPanel.add(createInfoLabel("Tipo de Aeronave:"));
-        tipoAeronaveLabel.setText("1234");
+        tipoAeronaveLabel.setText(myFlight.getAircraftCode());
         infoPanel.add(tipoAeronaveLabel);
         infoPanel.add(createInfoLabel("Origen:"));
         aeropuertoOrigenLabel.setText(myFlight.getOrigin().getCode().getIata());
         infoPanel.add(aeropuertoOrigenLabel);
+        ciudadOrigenLabel.setText(myFlight.getOrigin().getCity()+", "+myFlight.getOrigin().getCountry().getName());
+        infoPanel.add(ciudadOrigenLabel);
         infoPanel.add(createInfoLabel("Destino:"));
         aeropuertoDestinoLabel.setText(myFlight.getDestination().getCode().getIata());
         infoPanel.add(aeropuertoDestinoLabel);
+        ciudadDestinoLabel.setText(myFlight.getDestination().getCity()+", "+myFlight.getDestination().getCountry().getName());
+        infoPanel.add(ciudadDestinoLabel);
+
         infoPanel.add(createInfoLabel("Velocidad(knots) / Altitud(ft):"));
         velocidadAltitudLabel.setText(String.valueOf(myFlight.getSpeed())+
                 " / "+
                 String.valueOf(myFlight.getAltitud()));
         infoPanel.add(velocidadAltitudLabel);
+
         infoPanel.add(createInfoLabel("Hora programada salida:"));
         horaSalidaProgramadaLabel.setText(DateFormat.getFormatedDate(myFlight.getStatus().scheduled[0]));
         infoPanel.add(horaSalidaProgramadaLabel);
