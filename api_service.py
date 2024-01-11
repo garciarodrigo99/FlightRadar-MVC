@@ -6,6 +6,7 @@ from FlightRadar24.api import FlightRadar24API  # Asegúrate de importar adecuad
 import logging
 import sys
 from find_flight_module import find_flight, ArgumentError
+from recent_airports_module import obtener_rutas_aereas
 import re
 # url: http://127.0.0.1:<port_number>/<function_name>
 #http://127.0.0.1:5000/obtener_json
@@ -78,7 +79,7 @@ def get_info():
 
 @app.route(ruta_personalizada + '/history', methods=['GET'])
 def get_history():
-    return jsonify(selected_flight.get)
+    return jsonify(obtener_rutas_aereas(selected_flight.id))
 
 def actualizar_datos_json():
     global time_json

@@ -15,23 +15,40 @@ public class Flight implements suscriptionObject{
     private String originAptIATA;
     private String destinationAptIATA;
     private Status status;
+
+    protected String serverURL;
+
+    protected String infoURL;
+
     protected String statusURL;
 
     protected Estado estado;
 
+    protected String recentFlightsImageURL;
+
     public Flight(String id,String urlPort) {
         // Eliminar salto de linea y espacio en blaco
-        this.id = id.substring(0, id.length() - 1);;
-        String url = "http://127.0.0.1:"+urlPort+"/";
-        url += this.id;
-        JsonNode jsonNode = ReadJsonFromUrl.read(url+"/info");
-        this.registration = jsonNode.get("registration").asText();
-        this.fNumber = jsonNode.get("number").asText();
-        this.originAptIATA = jsonNode.get("origin_airport_iata").asText();
-        this.destinationAptIATA = jsonNode.get("destination_airport_iata").asText();
-        this.statusURL = url+"/status";
+        this.id = id.substring(0, id.length() - 1);
+        
+        this.serverURL = "http://127.0.0.1:"+urlPort+"/"+this.id;
+        
+        JsonNode infoJsonNode = ReadJsonFromUrl.read(this.serverURL+"/info");
+        this.registration = infoJsonNode.get("registration").asText();
+        this.fNumber = infoJsonNode.get("number").asText();
+        this.originAptIATA = infoJsonNode.get("origin_airport_iata").asText();
+        this.destinationAptIATA = infoJsonNode.get("destination_airport_iata").asText();
+        
+        this.statusURL = this.serverURL+"/status";
         this.status = new Status(ReadJsonFromUrl.read(this.statusURL));
         setEstado();
+        
+        JsonNode historyJsonNode = ReadJsonFromUrl.read(this.serverURL+"/history");
+        // Recorrer el JsonNode e imprimir cada elemento
+        System.out.println("Recorriendo vector de rutas:");
+        for (JsonNode nodo : historyJsonNode) {
+            String ruta = nodo.asText();
+            System.out.println(ruta);
+        }
     }
 
     public String getId(){
@@ -84,6 +101,12 @@ public class Flight implements suscriptionObject{
             this.estado = new Landed(this);
         }
     }
+
+    public String getRecentFlightsImageURL() {
+
+        return recentFlightsImageURL;
+    }
+
     @Override
     public String checkInformation(){
         String lastEstado = this.estado.toString();

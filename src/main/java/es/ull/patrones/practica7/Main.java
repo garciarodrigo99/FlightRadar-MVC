@@ -13,7 +13,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) throws InterruptedException {
 
-        String flightID = APIConnection.getFlightId("2", "BA2703");
+        String flightID = APIConnection.getFlightId("2", "UX25");
         System.out.println("Flight ID: " + flightID);
         if (flightID.charAt(0) == '1') {
             mostrarVentanaError("Error seguimiento de vuelo", "No se ha encontrado ningún vuelo en vivo para \nser rastreado con la información proporcionada.");

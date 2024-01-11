@@ -15,7 +15,7 @@ def obtener_rutas_aereas(identificador):
     """
     fr_api = FlightRadar24API()
     
-    my_flight_number = find_flight_module.find_flight(1, identificador)
+    my_flight_number = find_flight_module.find_flight(3, identificador)
     my_flight_details = fr_api.get_flight_details(my_flight_number)
     
     history = my_flight_details.get("flightHistory")
