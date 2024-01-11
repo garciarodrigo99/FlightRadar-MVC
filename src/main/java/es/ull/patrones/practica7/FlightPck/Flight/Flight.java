@@ -4,11 +4,15 @@ import com.fasterxml.jackson.databind.JsonNode;
 import es.ull.patrones.practica7.Connection.ReadJsonFromUrl;
 import es.ull.patrones.practica7.DateFormat;
 import es.ull.patrones.practica7.FlightPck.Airport.Airport;
+import es.ull.patrones.practica7.FlightPck.Distancia;
 import es.ull.patrones.practica7.FlightPck.Flight.EstadoVuelo.BeforeTO;
 import es.ull.patrones.practica7.FlightPck.Flight.EstadoVuelo.Estado;
 import es.ull.patrones.practica7.FlightPck.Flight.EstadoVuelo.Landed;
 import es.ull.patrones.practica7.FlightPck.Flight.EstadoVuelo.OnAir;
 import es.ull.patrones.practica7.FlightPck.suscriptionObject;
+import org.apache.commons.lang3.tuple.Pair;
+
+import java.util.List;
 
 public class Flight implements suscriptionObject {
     private String id;
@@ -16,6 +20,7 @@ public class Flight implements suscriptionObject {
     private String fNumber;
     private Airport origin;
     private Airport destination;
+    private int distanciaVuelo;
     private Status status;
 
     protected String serverURL;
@@ -57,6 +62,8 @@ public class Flight implements suscriptionObject {
         JsonNode airportsJsonNode = ReadJsonFromUrl.read(this.airportsURL);
         this.origin = new Airport(airportsJsonNode.get("origin"));
         this.destination = new Airport(airportsJsonNode.get("destination"));
+        this.distanciaVuelo = Distancia.calcularDistancia(this.origin.getPosition(),
+                this.destination.getPosition());
     }
 
     private void setStatusData(){
@@ -99,6 +106,7 @@ public class Flight implements suscriptionObject {
                 "Matricula: " + this.registration + "\n" +
                 "Número de vuelo: " + this.fNumber + "\n" +
                 this.origin.getCode().getIata() + "-" + this.destination.getCode().getIata() + "\n" +
+                "Distancia de vuelo: " + this.distanciaVuelo + "km\n" +
                 "Status:\n";
         if (this.status.estimated[0] != 0) {
             System.out.println("estimated departure: " + this.status.estimated[0]);
