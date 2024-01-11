@@ -1,6 +1,7 @@
 package es.ull.patrones.practica7.FlightPck.Flight;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import es.ull.patrones.practica7.Connection.ReadJsonFromUrl;
 import es.ull.patrones.practica7.DateFormat;
 import es.ull.patrones.practica7.FlightPck.Airport.Airport;
@@ -12,7 +13,9 @@ import es.ull.patrones.practica7.FlightPck.Flight.EstadoVuelo.OnAir;
 import es.ull.patrones.practica7.FlightPck.suscriptionObject;
 import org.apache.commons.lang3.tuple.Pair;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class Flight implements suscriptionObject {
     private String id;
@@ -22,6 +25,8 @@ public class Flight implements suscriptionObject {
     private Airport destination;
     private int distanciaVuelo;
     private Status status;
+    protected List<Pair<Long,Integer>> listaVelocidad = new ArrayList<>();
+    protected List<Pair<Long,Integer>> listaAltitud = new ArrayList<>();
 
     protected String serverURL;
 
@@ -34,6 +39,7 @@ public class Flight implements suscriptionObject {
     protected Estado estado;
 
     protected String recentFlightsImageURL;
+    private String trailURL;
 
     public Flight(String id,String urlPort) {
         // Eliminar salto de linea y espacio en blaco
@@ -48,6 +54,38 @@ public class Flight implements suscriptionObject {
         setStatusData();
         
         setHistoryData();
+
+        setTrail();
+    }
+
+    private void setTrail() {
+        this.trailURL = this.serverURL+"/trail";
+        ObjectMapper objectMapper = new ObjectMapper();
+
+        try {
+            JsonNode trailJsonNode = ReadJsonFromUrl.read(this.trailURL);
+
+            for (JsonNode node : trailJsonNode) {
+                Integer alt = node.get("alt").asInt();
+                Integer spd = node.get("spd").asInt();
+                Long ts = node.get("ts").asLong();
+
+                listaAltitud.add(Pair.of(ts,alt));
+                listaVelocidad.add(Pair.of(ts,spd));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
+    public List<Pair<Long, Integer>> getListaVelocidad() {
+        return listaVelocidad;
+    }
+
+    public List<Pair<Long, Integer>> getListaAltitud() {
+        return listaAltitud;
     }
 
     private void setInfoData(){
