@@ -1,18 +1,65 @@
 from FlightRadar24 import FlightRadar24API
 from FlightRadar24 import Flight
+
 class ArgumentError(Exception):
+    """
+    Excepción personalizada para manejar errores relacionados con argumentos.
+    """
     pass
 
 def _compare_registration(flight: Flight, reg: str):
+    """
+    Compara el número de registro de un vuelo con un valor dado.
+
+    Parámetros:
+    - flight (Flight): Objeto Flight que representa un vuelo.
+    - reg (str): Número de registro a comparar.
+
+    Retorna:
+    True si el número de registro del vuelo coincide con el valor dado, False en caso contrario.
+    """
     return reg == flight.registration
 
 def _compare_number(flight: Flight, number: str):
+    """
+    Compara el número de vuelo de un vuelo con un valor dado.
+
+    Parámetros:
+    - flight (Flight): Objeto Flight que representa un vuelo.
+    - number (str): Número de vuelo a comparar.
+
+    Retorna:
+    True si el número de vuelo del vuelo coincide con el valor dado, False en caso contrario.
+    """
     return number == flight.number
 
 def _compare_id(flight: Flight, id: str):
+    """
+    Compara el identificador de un vuelo con un valor dado.
+
+    Parámetros:
+    - flight (Flight): Objeto Flight que representa un vuelo.
+    - id (str): Identificador a comparar.
+
+    Retorna:
+    True si el identificador del vuelo coincide con el valor dado, False en caso contrario.
+    """
     return id == flight.id
 
 def find_flight(opcion: int, str: str) -> Flight:
+    """
+    Encuentra un vuelo según la opción y el valor proporcionados.
+
+    Parámetros:
+    - opcion (int): Opción que determina cómo comparar el valor (1 para registro, 2 para número, 3 para identificador).
+    - str (str): Valor a comparar.
+
+    Retorna:
+    Objeto Flight que representa el vuelo encontrado.
+
+    Lanza:
+    ArgumentError: Si la opción no es válida.
+    """
     choosen_function = None
     opcion = int(opcion)
     if opcion == 1:
@@ -32,13 +79,6 @@ def find_flight(opcion: int, str: str) -> Flight:
         selected_flights = fr_api.get_flights(
             bounds = zone_bounds
         )
-        #print(len(selected_flights))
         for i in selected_flights:
             if choosen_function(i,str):
-                # print(i.id,i.callsign,i.number,i.registration,
-                #     fr_api.get_airport(i.origin_airport_iata).city,
-                #     fr_api.get_airport(i.destination_airport_iata).city)
                 return i
-    
-    # if opcion == 1:
-    #     raise ArgumentError("No existe el avión con matricula: ",str)
