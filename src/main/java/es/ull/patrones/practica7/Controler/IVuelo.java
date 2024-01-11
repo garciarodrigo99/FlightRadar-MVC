@@ -1,5 +1,5 @@
 package es.ull.patrones.practica7.Controler;
-import es.ull.patrones.practica7.TimeSeriesChartPanel;
+import es.ull.patrones.practica7.View.TimeSeriesChartPanel;
 import es.ull.patrones.practica7.View.BarraProgresion;
 import es.ull.patrones.practica7.View.DatosVueloView;
 import es.ull.patrones.practica7.View.DescargarYMostrarImagen;

@@ -1,4 +1,4 @@
-package es.ull.patrones.practica7;
+package es.ull.patrones.practica7.View;
 
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
