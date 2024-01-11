@@ -1,4 +1,5 @@
 package es.ull.patrones.practica7.View;
+import es.ull.patrones.practica7.DateFormat;
 import es.ull.patrones.practica7.FlightPck.Flight.Flight;
 
 import javax.swing.*;
@@ -89,16 +90,27 @@ public class DatosVueloView extends JPanel {
                 String.valueOf(myFlight.getAltitud()));
         infoPanel.add(velocidadAltitudLabel);
         infoPanel.add(createInfoLabel("Hora programada salida:"));
-        horaSalidaProgramadaLabel.setText("1234");
+        horaSalidaProgramadaLabel.setText(DateFormat.getFormatedDate(myFlight.getStatus().scheduled[0]));
         infoPanel.add(horaSalidaProgramadaLabel);
+
         infoPanel.add(createInfoLabel("Hora real salida:"));
-        horaSalidaRealLabel.setText("1234");
+        if (myFlight.getStatus().real[0] == 0){
+            horaSalidaRealLabel.setText("-");
+        } else {
+            horaSalidaRealLabel.setText(DateFormat.getFormatedDate(myFlight.getStatus().real[0]));
+        }
         infoPanel.add(horaSalidaRealLabel);
+
         infoPanel.add(createInfoLabel("Hora programada llegada:"));
-        horaLlegadaProgramadaLabel.setText("1234");
+        horaLlegadaProgramadaLabel.setText(DateFormat.getFormatedDate(myFlight.getStatus().scheduled[1]));
         infoPanel.add(horaLlegadaProgramadaLabel);
+
         infoPanel.add(createInfoLabel("Hora real llegada:"));
-        horaLlegadaRealLabel.setText("1234");
+        if (myFlight.getStatus().real[1] == 0){
+            horaLlegadaRealLabel.setText("-");
+        } else {
+            horaLlegadaRealLabel.setText(DateFormat.getFormatedDate(myFlight.getStatus().real[1]));
+        }
         infoPanel.add(horaLlegadaRealLabel);
 
         return infoPanel;
