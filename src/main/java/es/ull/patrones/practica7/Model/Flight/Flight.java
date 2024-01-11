@@ -36,6 +36,7 @@ public class Flight implements suscriptionObject {
     private String aircraftCode;
     private int speed;
     private int altitud;
+    private Long lastTimeStamp;
     private String history;
 
     protected String serverURL;
@@ -77,6 +78,7 @@ public class Flight implements suscriptionObject {
         this.aircraftCode = infoJsonNode.get("aircraft_code").asText();
         this.speed = infoJsonNode.get("ground_speed").asInt();
         this.altitud = infoJsonNode.get("altitude").asInt();
+        this.lastTimeStamp = infoJsonNode.get("time").asLong();
     }
 
     private void setTrail() {
@@ -123,14 +125,13 @@ public class Flight implements suscriptionObject {
 
     private void setHistoryData(){
         JsonNode historyJsonNode = ReadJsonFromUrl.read(this.serverURL+"/history");
-        //String allRoutes = "c:#01b3a8,";
         String allRoutes = "";
         // Recorrer el JsonNode e imprimir cada elemento
-        System.out.println("Recorriendo vector de rutas:");
+        //System.out.println("Recorriendo vector de rutas:");
         for (JsonNode nodo : historyJsonNode) {
             String ruta = nodo.asText();
             allRoutes += ruta + ',';
-            System.out.println(ruta);
+            //System.out.println(ruta);
         }
         System.out.println(allRoutes);
         this.history = allRoutes;
@@ -187,6 +188,66 @@ public class Flight implements suscriptionObject {
         return altitud;
     }
 
+    public Long getLastTimeStamp() {
+        return lastTimeStamp;
+    }
+
+    private void updateStatus(){
+        this.status = new Status(ReadJsonFromUrl.read(this.statusURL));
+    }
+    public void actualizar(){
+        this.infoURL = this.serverURL+"/info";
+        JsonNode infoJsonNode = ReadJsonFromUrl.read(this.infoURL);
+        this.speed = infoJsonNode.get("ground_speed").asInt();
+        this.altitud = infoJsonNode.get("altitude").asInt();
+        this.lastTimeStamp = infoJsonNode.get("time").asLong();
+
+        updateStatus();
+    }
+
+    public String getRecentFlightsImageURL() {
+        String webURL = "http://www.gcmap.com";
+        String mapGeneratorURL = webURL + "/mapui?P=c:%23ce0c87,"+this.history +"&MS=wls2";
+        //Image imagen = null;
+        try {
+            // Realizar la solicitud HTTP para obtener el contenido de la página
+            Document doc = Jsoup.connect(mapGeneratorURL).get();
+
+            // Seleccionar el elemento img dentro de la estructura de divs dada
+            Element imgElement = doc.select("div#wrapper div#mid div#map_body.sect-show div#map_div img#map_image.map-image").first();
+
+            // Verificar si se encontró el elemento y obtener el atributo 'src'
+            if (imgElement != null) {
+                String src = imgElement.attr("src");
+                //System.out.println("URL de la imagen: " + src);
+
+                // Descargar la imagen y mostrarla en una ventana Swing
+                URL url = new URL(webURL + src);
+
+                this.recentFlightsImageURL = String.valueOf(url);
+                //imagen = ImageIO.read(url);
+                //System.out.println(url);
+            } else {
+                System.out.println("No se encontró la imagen en la estructura proporcionada.");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return recentFlightsImageURL;
+    }
+
+    @Override
+    public String checkInformation(){
+        String lastEstado = this.estado.toString();
+        System.out.println("Estado del vuelo: "+lastEstado);
+        updateStatus();
+        this.estado = this.estado.checkEstado();
+        if(!lastEstado.equals(this.estado.toString())){
+            System.out.println("checkInformation: "+this.estado.statusString());
+            return this.estado.statusString();
+        }
+        return null;
+    }
     @Override
     public String getInitialMessage() {
         String to_return = "-Monitorizando vuelo-\n" +
@@ -218,54 +279,4 @@ public class Flight implements suscriptionObject {
 
         return to_return;
     }
-
-    private void updateStatus(){
-        this.status = new Status(ReadJsonFromUrl.read(this.statusURL));
-    }
-
-
-    public String getRecentFlightsImageURL() {
-        String webURL = "http://www.gcmap.com";
-        String mapGeneratorURL = webURL + "/mapui?P=c:%23ce0c87,"+this.history +"&MS=wls2";
-        //Image imagen = null;
-        try {
-            // Realizar la solicitud HTTP para obtener el contenido de la página
-            Document doc = Jsoup.connect(mapGeneratorURL).get();
-
-            // Seleccionar el elemento img dentro de la estructura de divs dada
-            Element imgElement = doc.select("div#wrapper div#mid div#map_body.sect-show div#map_div img#map_image.map-image").first();
-
-            // Verificar si se encontró el elemento y obtener el atributo 'src'
-            if (imgElement != null) {
-                String src = imgElement.attr("src");
-                System.out.println("URL de la imagen: " + src);
-
-                // Descargar la imagen y mostrarla en una ventana Swing
-                URL url = new URL(webURL + src);
-
-                this.recentFlightsImageURL = String.valueOf(url);
-                //imagen = ImageIO.read(url);
-                System.out.println(url);
-            } else {
-                System.out.println("No se encontró la imagen en la estructura proporcionada.");
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return recentFlightsImageURL;
-    }
-
-    @Override
-    public String checkInformation(){
-        String lastEstado = this.estado.toString();
-        System.out.println("Estado del vuelo: "+lastEstado);
-        updateStatus();
-        this.estado = this.estado.checkEstado();
-        if(!lastEstado.equals(this.estado.toString())){
-            System.out.println("checkInformation: "+this.estado.statusString());
-            return this.estado.statusString();
-        }
-        return null;
-    }
-
 }

@@ -1,6 +1,7 @@
 package es.ull.patrones.practica7.View;
 import es.ull.patrones.practica7.DateFormat;
 import es.ull.patrones.practica7.Model.Flight.Flight;
+import es.ull.patrones.practica7.Model.Flight.Status;
 
 import javax.swing.*;
 import java.awt.*;
@@ -142,11 +143,24 @@ public class DatosVueloView extends JPanel {
     }
 
     // Método para actualizar la información del vuelo en la vista
-    public void actualizarInformacionVuelo(String velocidadAltitud, String numeroRegistro,
-                                           String fabricanteModelo, Date fechaHora) {
-        velocidadAltitudLabel.setText(velocidadAltitud);
+    public void actualizar(Integer velocidad, Integer altitud,
+                           Status status) {
 
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
-        //fechaHoraLabel.setText(dateFormat.format(fechaHora));
+        velocidadAltitudLabel.setText(String.valueOf(velocidad)+
+                " / "+
+                String.valueOf(altitud));
+
+
+        if (status.real[0] == 0){
+            horaSalidaRealLabel.setText("-");
+        } else {
+            horaSalidaRealLabel.setText(DateFormat.getFormatedDate(status.real[0]));
+        }
+
+        if (status.real[1] == 0){
+            horaLlegadaRealLabel.setText("-");
+        } else {
+            horaLlegadaRealLabel.setText(DateFormat.getFormatedDate(status.real[1]));
+        }
     }
 }

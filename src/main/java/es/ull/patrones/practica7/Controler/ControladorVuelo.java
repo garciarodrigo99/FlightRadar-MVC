@@ -11,6 +11,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class ControladorVuelo extends JFrame {
 
@@ -24,6 +26,9 @@ public class ControladorVuelo extends JFrame {
     private ImagenView imagenView;
     private BarraProgresion barraProgresion;
     private Flight flightSelected;
+
+    private TimeSeriesChartPanel chartVelocidad;
+    private TimeSeriesChartPanel chartAltitud;
 
     public ControladorVuelo(Flight flightSelected) {
         this.flightSelected = flightSelected;
@@ -88,22 +93,19 @@ public class ControladorVuelo extends JFrame {
 
         // Crear las vistas para cada panel
         datosVueloView = new DatosVueloView(this.flightSelected);
-        TimeSeriesChartPanel chartVelocidad = new TimeSeriesChartPanel("Tiempo-Velocidad",
+        this.chartVelocidad = new TimeSeriesChartPanel("Tiempo-Velocidad",
                 "Hora",
                 "Velocidad(knots)");
-        chartVelocidad.insertarDatos(flightSelected.getListaVelocidad());
+        this.chartVelocidad.insertarDatos(flightSelected.getListaVelocidad());
 
 
-        TimeSeriesChartPanel chartAltitud = new TimeSeriesChartPanel("Tiempo-Altitud",
+        this.chartAltitud = new TimeSeriesChartPanel("Tiempo-Altitud",
                 "Hora",
                 "Altitud(ft)");
-        chartAltitud.insertarDatos(flightSelected.getListaAltitud());
+        this.chartAltitud.insertarDatos(flightSelected.getListaAltitud());
 
-        //chart.mostrar();
-        //graficaViewAltitud = new GraficaView("Tiempo", "Altitud", Color.CYAN);
-        //graficaViewVelocidad = new GraficaView("Tiempo", "Velocidad", Color.YELLOW);
-        imagenView = new ImagenView(mostrarImagenes.imagenfromURL(this.flightSelected.getRecentFlightsImageURL()));
-        barraProgresion = new BarraProgresion();
+        this.imagenView = new ImagenView(mostrarImagenes.imagenfromURL(this.flightSelected.getRecentFlightsImageURL()));
+        this.barraProgresion = new BarraProgresion();
 
         // Crear el JSplitPane principal para dividir la ventana en dos secciones verticales
         JSplitPane splitPaneVerticalIzquierda = new JSplitPane(JSplitPane.VERTICAL_SPLIT, chartVelocidad, imagenView);
@@ -134,6 +136,33 @@ public class ControladorVuelo extends JFrame {
         getContentPane().add(cardPanel);
 
         // Hacer visible la ventana
-        setVisible(true);
+        //setVisible(true);
+    }
+    public void mostrar() {
+        // Hacer visible la ventana usando SwingUtilities.invokeLater
+        SwingUtilities.invokeLater(() -> {
+            // Instanciar un objeto Timer para las actualizaciones periódicas
+            Timer timer = new Timer(false);
+
+            // Programar la tarea de actualización cada 10 segundos
+            timer.scheduleAtFixedRate(new TimerTask() {
+                @Override
+                public void run() {
+                    SwingUtilities.invokeLater(() -> actualizarDatos());
+                }
+            }, 0, 10000);
+
+            // Hacer visible la ventana
+            setVisible(true);
+        });
+    }
+
+    private void actualizarDatos() {
+        flightSelected.actualizar();
+
+        datosVueloView.actualizar(flightSelected.getSpeed(),
+                flightSelected.getAltitud(),
+                flightSelected.getStatus());
+
     }
 }
