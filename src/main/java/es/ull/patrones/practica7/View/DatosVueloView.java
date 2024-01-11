@@ -14,7 +14,7 @@ public class DatosVueloView extends JPanel {
     private JLabel fabricanteModeloLabel;
     private JLabel fechaHoraLabel;
 
-    DatosVueloView() {
+    public DatosVueloView() {
         // Configura la vista
         setLayout(new BorderLayout());
         setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10)); // Espaciado alrededor del panel

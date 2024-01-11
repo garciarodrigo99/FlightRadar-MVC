@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 // Vista para el panel de imagen
-class ImagenView extends JPanel {
+public class ImagenView extends JPanel {
 
        public ImagenView(Image imagen) {
             // Crear un JLabel para mostrar la imagen

@@ -1,0 +1,159 @@
+@startuml
+class es.ull.patrones.practica7.Events.EventManager {
+~ Map<suscriptionObject,List<myEventListener>> listeners
++ void addObserver(suscriptionObject,myEventListener)
++ void removeObserver(suscriptionObject,myEventListener)
++ void notifyObservers(suscriptionObject,String)
++ void checkEvents()
+}
+class es.ull.patrones.practica7.FlightPck.Status {
++ Integer[] estimated
++ Integer[] real
++ Integer[] scheduled
+}
+class es.ull.patrones.practica7.View.DatosVueloView {
+- JLabel numeroVueloLabel
+- JLabel aerolineaLabel
+- JLabel tipoAeronaveLabel
+- JLabel estadoVueloLabel
+- JLabel velocidadAltitudLabel
+- JLabel registroLabel
+- JLabel fabricanteModeloLabel
+- JLabel fechaHoraLabel
+- JLabel createStyledLabel()
+- JPanel createInfoPanel()
+- JLabel createInfoLabel(String)
+- JPanel createImagePanel()
++ void actualizarInformacionVuelo(String,String,String,String,String,String,String,Date)
+}
+interface es.ull.patrones.practica7.FlightPck.suscriptionObject {
+~ String getId()
+~ String checkInformation()
+~ String getInitialMessage()
+}
+class es.ull.patrones.practica7.Events.FlightListener {
+- List<Usuario> usuarios
++ void addUsuario(Usuario)
++ void update(String)
+}
+class es.ull.patrones.practica7.TimeSeriesChartPanel {
+- TimeSeries timeSeries
+- TimeSeriesCollection dataset
+- JFreeChart chart
++ void insertarDatos(int,int)
+}
+class es.ull.patrones.practica7.Connection.APIConnection {
++ {static} String getFlightId(String,String)
++ {static} String loadConnection(String,String,String)
+}
+class es.ull.patrones.practica7.View.DescargarYMostrarImagen {
++ {static} void main(String[])
+- {static} void descargarYMostrarImagen(String)
++ {static} Image imagenfromURL(String)
+}
+class es.ull.patrones.practica7.View.BarraProgresion {
+- JProgressBar progressBar
+- JLabel tiempoRestanteLabel
++ void actualizarBarraProgresion(int,int)
++ {static} void main(String[])
+}
+class es.ull.patrones.practica7.Controler.IVuelo {
+- CardLayout cardLayout
+- JPanel cardPanel
+- JComboBox<String> opcionesComboBox
+- JTextField cuadroTexto
+- JButton botonAccion
+- DatosVueloView datosVueloView
+- ImagenView imagenView
+- BarraProgresion barraProgresion
++ {static} void main(String[])
+}
+class es.ull.patrones.practica7.TrackerApp {
++ EventManager events
++ void start()
+}
+abstract class es.ull.patrones.practica7.FlightPck.EstadoVuelo.Estado {
+# Flight flight
++ {abstract}Estado checkEstado()
++ {abstract}String toString()
++ {abstract}String statusString()
+}
+interface es.ull.patrones.practica7.Events.myEventListener {
+~ void update(String)
+}
+class es.ull.patrones.practica7.Connection.FreePortFinder {
++ {static} int findFreePort(int)
++ {static} boolean isPortAvailable(int)
+}
+class es.ull.patrones.practica7.DateFormat {
++ {static} String getFormatedDate(Integer)
+}
+class es.ull.patrones.practica7.FlightPck.EstadoVuelo.BeforeTO {
++ Estado checkEstado()
++ String toString()
++ String statusString()
+}
+class es.ull.patrones.practica7.View.TimeSeriesChartExample {
+}
+class es.ull.patrones.practica7.FlightPck.EstadoVuelo.Landed {
++ Estado checkEstado()
++ String toString()
++ String statusString()
+}
+class es.ull.patrones.practica7.Usuario {
+- Ventana ventana
+- String nombre
++ void recibirAviso(String)
+}
+class es.ull.patrones.practica7.View.ImagenView {
+}
+class es.ull.patrones.practica7.Main {
++ {static} void main(String[])
+- {static} void mostrarVentanaError(String,String)
+}
+class es.ull.patrones.practica7.FlightPck.Flight {
+- String id
+- String registration
+- String fNumber
+- String originAptIATA
+- String destinationAptIATA
+- Status status
+# String statusURL
+# Estado estado
++ String getId()
++ Status getStatus()
++ String getInitialMessage()
+- void updateStatus()
+- void setEstado()
++ String checkInformation()
+}
+class es.ull.patrones.practica7.Ventana {
+- JPanel panel
+- JScrollPane scrollPane
+- String nombreUsuario
+- void initComponents()
++ void mostrarMensaje(String)
+}
+class es.ull.patrones.practica7.Connection.ReadJsonFromUrl {
++ {static} JsonNode read(String)
+- {static} String readJsonFromUrl(String)
+}
+class es.ull.patrones.practica7.FlightPck.EstadoVuelo.OnAir {
++ Estado checkEstado()
++ String toString()
++ String statusString()
+}
+
+
+es.ull.patrones.practica7.View.JPanel <|-- es.ull.patrones.practica7.View.DatosVueloView
+es.ull.patrones.practica7.Events.myEventListener <|.. es.ull.patrones.practica7.Events.FlightListener
+es.ull.patrones.practica7.JPanel <|-- es.ull.patrones.practica7.TimeSeriesChartPanel
+es.ull.patrones.practica7.View.JPanel <|-- es.ull.patrones.practica7.View.BarraProgresion
+es.ull.patrones.practica7.Controler.JFrame <|-- es.ull.patrones.practica7.Controler.IVuelo
+es.ull.patrones.practica7.FlightPck.EstadoVuelo.Estado <|-- es.ull.patrones.practica7.FlightPck.EstadoVuelo.BeforeTO
+es.ull.patrones.practica7.FlightPck.EstadoVuelo.Estado <|-- es.ull.patrones.practica7.FlightPck.EstadoVuelo.Landed
+es.ull.patrones.practica7.View.JPanel <|-- es.ull.patrones.practica7.View.ImagenView
+es.ull.patrones.practica7.FlightPck.suscriptionObject <|.. es.ull.patrones.practica7.FlightPck.Flight
+es.ull.patrones.practica7.JFrame <|-- es.ull.patrones.practica7.Ventana
+es.ull.patrones.practica7.FlightPck.EstadoVuelo.Estado <|-- es.ull.patrones.practica7.FlightPck.EstadoVuelo.OnAir
+@enduml
