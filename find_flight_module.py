@@ -51,7 +51,7 @@ def find_flight(opcion: int, str: str) -> Flight:
     Encuentra un vuelo según la opción y el valor proporcionados.
 
     Parámetros:
-    - opcion (int): Opción que determina cómo comparar el valor (1 para registro, 2 para número, 3 para identificador).
+    - opcion (int): Opción que determina cómo comparar el valor (1 para matricula, 2 para número, 3 para identificador).
     - str (str): Valor a comparar.
 
     Retorna:

@@ -8,6 +8,14 @@ import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 
 public class APIConnection {
+    /**
+     * Obtiene el identificador de vuelo utilizando un script de Python.
+     *
+     * @param opcion   Opción que determina cómo comparar el valor
+     *                 (1 para matrícula, 2 para número, 3 para identificador).
+     * @param content  Contenido a comparar con la opción especificada.
+     * @return         Identificador de vuelo obtenido del script de Python.
+     */
     public static String getFlightId(String opcion, String content) {
         String outputContent = "1";
         try {

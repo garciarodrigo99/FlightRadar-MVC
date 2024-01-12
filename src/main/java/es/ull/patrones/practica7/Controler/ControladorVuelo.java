@@ -16,11 +16,8 @@ import java.util.TimerTask;
 
 public class ControladorVuelo extends JFrame {
 
-/*    private CardLayout cardLayout;
+    private CardLayout cardLayout;
     private JPanel cardPanel;
-    private JComboBox<String> opcionesComboBox;
-    private JTextField cuadroTexto;
-    private JButton botonAccion;*/
     private DatosVueloView datosVueloView;
 
     private ImagenView imagenView;
@@ -33,11 +30,16 @@ public class ControladorVuelo extends JFrame {
     public ControladorVuelo(Flight flightSelected) {
         this.flightSelected = flightSelected;
         // Configuración de la ventana
-        setPreferredSize(new Dimension(400, 300));  // Tamaño inicial
         pack();
         setTitle("Seguimiento de Vuelo");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLocationRelativeTo(null);
+
+        // Establecer el tamaño máximo como el tamaño de la pantalla
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        setMaximumSize(screenSize);
+
+        // Hacer que la ventana comience maximizada
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
 
         // Utilizar el aspecto Nimbus
         try {
@@ -46,50 +48,9 @@ public class ControladorVuelo extends JFrame {
             e.printStackTrace();
         }
 
-/*        // Crear el panel principal
+        // Crear el panel principal
         cardLayout = new CardLayout();
         cardPanel = new JPanel(cardLayout);
-
-        // Crear el panel de entrada
-        JPanel entradaPanel = new JPanel(new GridLayout(4, 1));
-
-        // Crear el JComboBox con las opciones
-        String[] opciones = {"Matrícula", "ID", "Vuelo"};
-        opcionesComboBox = new JComboBox<>(opciones);
-
-        // Crear el JTextField
-        cuadroTexto = new JTextField();
-
-        // Crear el JButton para realizar alguna acción
-        botonAccion = new JButton("Continuar");
-
-        // Personalizar el botón
-        botonAccion.setBackground(new Color(175,197,219));
-        botonAccion.setForeground(Color.BLACK);
-        botonAccion.setFocusPainted(false);
-
-        // Configurar el ActionListener para el botón
-        botonAccion.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                String opcionSeleccionada = (String) opcionesComboBox.getSelectedItem();
-                String textoIngresado = cuadroTexto.getText();
-
-                // Lógica para mostrar los datos de vuelo, la gráfica y la imagen
-                // Puedes agregar aquí la lógica para cargar los datos, la gráfica y la imagen.
-
-                // Cambiar a pantalla completa después de hacer clic en "Continuar"
-                setExtendedState(JFrame.MAXIMIZED_BOTH);
-
-                // Mostrar el resultado y ocultar los demás componentes
-                cardLayout.show(cardPanel, "RESULTADO");
-            }
-        });
-
-        // Agregar componentes al panel de entrada
-        entradaPanel.add(opcionesComboBox);
-        entradaPanel.add(cuadroTexto);
-        entradaPanel.add(botonAccion);*/
 
         // Crear las vistas para cada panel
         datosVueloView = new DatosVueloView(this.flightSelected);
@@ -126,17 +87,12 @@ public class ControladorVuelo extends JFrame {
         JSplitPane splitPaneHorizontalDerechaTotal = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, splitPaneHorizontalDerecha, splitPaneVerticalDerecha);
         splitPaneHorizontalDerechaTotal.setDividerLocation(1200);  // Ajusta la ubicación del divisor vertical
 
-/*        // Agregar el panel de entrada al cardPanel
-        cardPanel.add(entradaPanel, "ENTRADA");
-
         // Agregar el JSplitPane principal al cardPanel para mostrar los datos de vuelo, la gráfica y la imagen
         cardPanel.add(splitPaneHorizontalDerechaTotal, "RESULTADO");
 
         // Agregar el cardPanel al contenedor de la ventana
-        getContentPane().add(cardPanel);*/
+        getContentPane().add(cardPanel);
 
-        // Hacer visible la ventana
-        //setVisible(true);
     }
     public void mostrar() {
         // Hacer visible la ventana usando SwingUtilities.invokeLater
