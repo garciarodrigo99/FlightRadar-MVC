@@ -10,12 +10,14 @@ import es.ull.patrones.practica7.Model.Flight.EstadoVuelo.BeforeTO;
 import es.ull.patrones.practica7.Model.Flight.EstadoVuelo.Estado;
 import es.ull.patrones.practica7.Model.Flight.EstadoVuelo.Landed;
 import es.ull.patrones.practica7.Model.Flight.EstadoVuelo.OnAir;
+import es.ull.patrones.practica7.Model.Position;
 import es.ull.patrones.practica7.Model.suscriptionObject;
 import org.apache.commons.lang3.tuple.Pair;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
+import javax.crypto.spec.PSource;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -35,7 +37,8 @@ public class Flight implements suscriptionObject {
     private String airlineICAO;
     private String aircraftCode;
     private int speed;
-    private int altitud;
+    //private int altitud;
+    private Position position;
     private Long lastTimeStamp;
     private String history;
 
@@ -77,7 +80,10 @@ public class Flight implements suscriptionObject {
         this.airlineICAO = infoJsonNode.get("airline_icao").asText();
         this.aircraftCode = infoJsonNode.get("aircraft_code").asText();
         this.speed = infoJsonNode.get("ground_speed").asInt();
-        this.altitud = infoJsonNode.get("altitude").asInt();
+        Integer altitud = infoJsonNode.get("altitude").asInt();
+        Double latitud = infoJsonNode.get("latitude").asDouble();
+        Double longitude = infoJsonNode.get("longitude").asDouble();
+        this.position = new Position(latitud,longitude,altitud);
         this.lastTimeStamp = infoJsonNode.get("time").asLong();
     }
 
@@ -184,8 +190,8 @@ public class Flight implements suscriptionObject {
         return speed;
     }
 
-    public int getAltitud() {
-        return altitud;
+    public Position getPosition() {
+        return this.position;
     }
 
     public Long getLastTimeStamp() {
@@ -199,7 +205,10 @@ public class Flight implements suscriptionObject {
         this.infoURL = this.serverURL+"/info";
         JsonNode infoJsonNode = ReadJsonFromUrl.read(this.infoURL);
         this.speed = infoJsonNode.get("ground_speed").asInt();
-        this.altitud = infoJsonNode.get("altitude").asInt();
+        Integer altitud = infoJsonNode.get("altitude").asInt();
+        Double latitud = infoJsonNode.get("latitude").asDouble();
+        Double longitude = infoJsonNode.get("longitude").asDouble();
+        this.position = new Position(latitud,longitude,altitud);
         this.lastTimeStamp = infoJsonNode.get("time").asLong();
 
         updateStatus();
@@ -207,7 +216,15 @@ public class Flight implements suscriptionObject {
 
     public String getRecentFlightsImageURL() {
         String webURL = "http://www.gcmap.com";
-        String mapGeneratorURL = webURL + "/mapui?P=c:%23ce0c87,"+this.history +"&MS=wls2";
+        String mapGeneratorURL = webURL + "/mapui?P=c:%23000000,"+this.history +
+                "c:%23ff0000," +
+                this.origin.getCode().getIata()+
+                "-" + this.destination.getCode().getIata()+
+                "," +
+                String.valueOf(position.getLatitude())+
+                ","+
+                String.valueOf(position.getLongitude())+
+                "&MS=wls2";
         //Image imagen = null;
         try {
             // Realizar la solicitud HTTP para obtener el contenido de la página

@@ -1,5 +1,7 @@
 package es.ull.patrones.practica7.Controler;
+import es.ull.patrones.practica7.Model.Distancia;
 import es.ull.patrones.practica7.Model.Flight.Flight;
+import es.ull.patrones.practica7.Model.Position;
 import es.ull.patrones.practica7.View.TimeSeriesChartPanel;
 import es.ull.patrones.practica7.View.BarraProgresion;
 import es.ull.patrones.practica7.View.DatosVueloView;
@@ -66,7 +68,16 @@ public class ControladorVuelo extends JFrame {
         this.chartAltitud.insertarDatos(flightSelected.getListaAltitud());
 
         this.imagenView = new ImagenView(mostrarImagenes.imagenfromURL(this.flightSelected.getRecentFlightsImageURL()));
-        this.barraProgresion = new BarraProgresion();
+        this.barraProgresion = new BarraProgresion(
+                                    Distancia.calcularDistancia(
+                                        flightSelected.getOrigin().getPosition(),
+                                            flightSelected.getPosition()
+                                    ),
+                                    Distancia.calcularDistancia(
+                                            flightSelected.getDestination().getPosition(),
+                                            flightSelected.getOrigin().getPosition()
+                                    )
+                                );
 
         // Crear el JSplitPane principal para dividir la ventana en dos secciones verticales
         JSplitPane splitPaneVerticalIzquierda = new JSplitPane(JSplitPane.VERTICAL_SPLIT, chartVelocidad, imagenView);
@@ -117,13 +128,18 @@ public class ControladorVuelo extends JFrame {
         flightSelected.actualizar();
 
         datosVueloView.actualizar(flightSelected.getSpeed(),
-                flightSelected.getAltitud(),
+                flightSelected.getPosition().getAltitude(),
                 flightSelected.getStatus());
 
         chartAltitud.insertarDatos(flightSelected.getLastTimeStamp(),
-                flightSelected.getAltitud());
+                flightSelected.getPosition().getAltitude());
         chartVelocidad.insertarDatos(flightSelected.getLastTimeStamp(),
                 flightSelected.getSpeed());
 
+        barraProgresion.actualizarBarraProgresion(
+                Distancia.calcularDistancia(
+                    flightSelected.getOrigin().getPosition(),
+                    flightSelected.getPosition())
+                );
     }
 }

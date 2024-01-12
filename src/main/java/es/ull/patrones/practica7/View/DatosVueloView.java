@@ -97,7 +97,7 @@ public class DatosVueloView extends JPanel {
         infoPanel.add(createInfoLabel("Velocidad(knots) / Altitud(ft):"));
         velocidadAltitudLabel.setText(String.valueOf(myFlight.getSpeed())+
                 " / "+
-                String.valueOf(myFlight.getAltitud()));
+                String.valueOf(myFlight.getPosition().getAltitude()));
         infoPanel.add(velocidadAltitudLabel);
 
         infoPanel.add(createInfoLabel("Hora programada salida:"));

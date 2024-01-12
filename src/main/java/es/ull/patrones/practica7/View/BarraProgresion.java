@@ -7,7 +7,7 @@ public class BarraProgresion extends JPanel {
     private JProgressBar progressBar;
     private JLabel tiempoRestanteLabel;
 
-    public BarraProgresion() {
+    public BarraProgresion(int initialValor, int maxValor) {
         setLayout(new BorderLayout());
         setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10)); // Espaciado alrededor del panel
         setBackground(Color.WHITE); // Fondo blanco
@@ -20,9 +20,10 @@ public class BarraProgresion extends JPanel {
         progressBar.setForeground(new Color(30, 144, 255)); // Barra de progreso azul
 
         // Crea un JLabel para mostrar el tiempo restante
-        tiempoRestanteLabel = new JLabel("Tiempo restante: ");
+        tiempoRestanteLabel = new JLabel("Distancia restante: ");
         tiempoRestanteLabel.setFont(new Font("Arial", Font.PLAIN, 12));
         tiempoRestanteLabel.setForeground(new Color(105, 105, 105)); // Gris oscuro
+
 
         // Añade la barra de progresión y el tiempo restante al panel
         JPanel centerPanel = new JPanel(new BorderLayout());
@@ -33,44 +34,20 @@ public class BarraProgresion extends JPanel {
         JPanel outerPanel = new JPanel(new BorderLayout());
         outerPanel.add(centerPanel, BorderLayout.CENTER);
 
+        progressBar.setMinimum(0);
+        progressBar.setValue(initialValor);
+        progressBar.setMaximum(maxValor);
         // Añade el panel de progresión al centro de la pantalla
         add(outerPanel, BorderLayout.CENTER);
     }
 
     // Método para actualizar la barra de progresión y mostrar el tiempo restante
-    public void actualizarBarraProgresion(int valorActual, int valorMaximo) {
-        progressBar.setMinimum(0);
-        progressBar.setMaximum(valorMaximo);
+    public void actualizarBarraProgresion(int valorActual) {
+
         progressBar.setValue(valorActual);
 
-        int tiempoRestante = valorMaximo - valorActual;
-        tiempoRestanteLabel.setText("Tiempo restante: " + tiempoRestante + " segundos");
-    }
-
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            JFrame frame = new JFrame("Ejemplo Barra de Progresión");
-            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            frame.setPreferredSize(new Dimension(300, 150)); // Ajusta la altura de la ventana
-            frame.getContentPane().add(new BarraProgresion());
-            frame.pack();
-            frame.setLocationRelativeTo(null);
-            frame.setVisible(true);
-
-            // Actualiza la barra de progresión cada segundo para demostración
-            Timer timer = new Timer(1000, e -> {
-                BarraProgresion barraProgresion = (BarraProgresion) frame.getContentPane().getComponent(0);
-                int valorActual = barraProgresion.progressBar.getValue();
-                int valorMaximo = barraProgresion.progressBar.getMaximum();
-
-                // Incrementa el valor actual hasta el máximo
-                if (valorActual < valorMaximo) {
-                    barraProgresion.actualizarBarraProgresion(valorActual + 10, valorMaximo);
-                } else {
-                    ((Timer) e.getSource()).stop();
-                }
-            });
-            timer.start();
-        });
+        int tiempoRestante = progressBar.getMaximum() - progressBar.getValue();
+        tiempoRestanteLabel.setText("Distancia restante: " + tiempoRestante + " km");
+        repaint();
     }
 }
