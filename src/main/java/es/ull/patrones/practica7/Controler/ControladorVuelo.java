@@ -16,11 +16,11 @@ import java.util.TimerTask;
 
 public class ControladorVuelo extends JFrame {
 
-    private CardLayout cardLayout;
+/*    private CardLayout cardLayout;
     private JPanel cardPanel;
     private JComboBox<String> opcionesComboBox;
     private JTextField cuadroTexto;
-    private JButton botonAccion;
+    private JButton botonAccion;*/
     private DatosVueloView datosVueloView;
 
     private ImagenView imagenView;
@@ -46,7 +46,7 @@ public class ControladorVuelo extends JFrame {
             e.printStackTrace();
         }
 
-        // Crear el panel principal
+/*        // Crear el panel principal
         cardLayout = new CardLayout();
         cardPanel = new JPanel(cardLayout);
 
@@ -89,7 +89,7 @@ public class ControladorVuelo extends JFrame {
         // Agregar componentes al panel de entrada
         entradaPanel.add(opcionesComboBox);
         entradaPanel.add(cuadroTexto);
-        entradaPanel.add(botonAccion);
+        entradaPanel.add(botonAccion);*/
 
         // Crear las vistas para cada panel
         datosVueloView = new DatosVueloView(this.flightSelected);
@@ -126,14 +126,14 @@ public class ControladorVuelo extends JFrame {
         JSplitPane splitPaneHorizontalDerechaTotal = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, splitPaneHorizontalDerecha, splitPaneVerticalDerecha);
         splitPaneHorizontalDerechaTotal.setDividerLocation(1200);  // Ajusta la ubicación del divisor vertical
 
-        // Agregar el panel de entrada al cardPanel
+/*        // Agregar el panel de entrada al cardPanel
         cardPanel.add(entradaPanel, "ENTRADA");
 
         // Agregar el JSplitPane principal al cardPanel para mostrar los datos de vuelo, la gráfica y la imagen
         cardPanel.add(splitPaneHorizontalDerechaTotal, "RESULTADO");
 
         // Agregar el cardPanel al contenedor de la ventana
-        getContentPane().add(cardPanel);
+        getContentPane().add(cardPanel);*/
 
         // Hacer visible la ventana
         //setVisible(true);
@@ -163,6 +163,11 @@ public class ControladorVuelo extends JFrame {
         datosVueloView.actualizar(flightSelected.getSpeed(),
                 flightSelected.getAltitud(),
                 flightSelected.getStatus());
+
+        chartAltitud.insertarDatos(flightSelected.getLastTimeStamp(),
+                flightSelected.getAltitud());
+        chartVelocidad.insertarDatos(flightSelected.getLastTimeStamp(),
+                flightSelected.getSpeed());
 
     }
 }

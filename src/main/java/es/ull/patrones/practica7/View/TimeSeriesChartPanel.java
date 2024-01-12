@@ -57,6 +57,7 @@ public class TimeSeriesChartPanel extends JPanel {
 
     public void insertarDatos(Long unixDate, Integer value) {
         timeSeries.addOrUpdate(new Second(new Date(unixDate * 1000L)), value);
+        repaint();
     }
 
     public void insertarDatos(List<Pair<Long,Integer>> valueList) {
